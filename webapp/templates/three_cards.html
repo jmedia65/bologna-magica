@@ -9,7 +9,7 @@
 		{% if card[1]: %}
 
 		  	<div class="col-md-4">
-			    <h3>{{ card[0].name }} - reversed</h3>
+			    <h2>{{ card[0].name }} - reversed</h2>
 		    	<img src="/static/{{ card[0].image }}" style="transform: rotate(180deg)" />
 		    	<p>{{ card[0].rdesc }}</p>
 	    	</div>
@@ -17,7 +17,7 @@
    		{% else %}
 
 		  	<div class="col-md-4">
-			    <h3>{{ card[0].name }}</h3>
+			    <h2>{{ card[0].name }}</h2>
 		    	<img src="/static/{{ card[0].image }}" />
 		    	<p>{{ card[0].desc }}</p>
 	    	</div>
