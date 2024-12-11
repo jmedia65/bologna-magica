@@ -2,12 +2,10 @@
 from webapp import app 
 from flask import render_template
 
-
 # for the cards 
 from webapp import cards
 # and the shuffle
-import random
-
+# import random
 
 # home page
 @app.route('/')
