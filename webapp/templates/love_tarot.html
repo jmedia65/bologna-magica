@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center mb-4">Tarocchi dell'Amore</h1>
+    <p class="text-center mb-4">Seleziona la tua domanda per ricevere una lettura dei tarocchi sull'amore</p>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            {% for question in questions %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <a href="{{ url_for('love_reading', question_id=question.id) }}" 
+                       class="text-decoration-none text-dark">
+                        <h3 class="card-title">{{ question.title }}</h3>
+                        <p class="card-text text-muted">{{ question.subtitle }}</p>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,6 +1,6 @@
 # for the app routes
 from webapp import app 
-from flask import render_template
+from flask import render_template, jsonify
 
 # for the cards 
 from webapp import cards
@@ -11,7 +11,6 @@ from webapp import cards
 @app.route('/')
 def index():
 	return render_template("index.html")
-
 
 # tarot study
 @app.route('/tarot-study', strict_slashes=False)
@@ -24,7 +23,13 @@ def reading_list():
 	return render_template("reading_list.html")
 
 
-# get one card
+# One Card In-Between Route
+@app.route('/one-card-tarot', strict_slashes=False)
+def one_card_tarot():
+    return render_template('one_card_tarot.html', 
+                         title="Estrai Una Carta dei Tarocchi")
+
+# Get One Card
 @app.route('/one-card', strict_slashes=False)
 def one_card():
 	my_deck = cards.get_deck()
@@ -50,6 +55,12 @@ def one_card():
 								image = my_card[0]['image'],
 								url = my_card[0]['url'],
 								cardtype = my_card[0]['cardtype'])
+
+# Three Cards In-Between Route
+@app.route('/three-cards-tarot', strict_slashes=False)
+def three_cards_tarot():
+    return render_template('three_cards_tarot.html', 
+                         title="Lettura dei Tarocchi: Passato, Presente e Futuro")
 
 # get three cards
 @app.route('/three-cards', strict_slashes=False)
@@ -103,4 +114,79 @@ def specific_card(card_url):
 							    sequence = my_card['sequence'],
 							    cardtype = my_card['cardtype'])
 
+# Tarocchi dell'Amore
+LOVE_QUESTIONS = [
+    {
+        'id': 'future',
+        'title': 'IL FUTURO DELLA RELAZIONE',
+        'subtitle': 'Come si evolverà la relazione?'
+    },
+    {
+        'id': 'feelings',
+        'title': "M'AMA ... NON M'AMA",
+        'subtitle': 'I sentimenti del partner'
+    },
+    {
+        'id': 'return',
+        'title': "TORNERA' DA ME?",
+        'subtitle': "Ritorno d'amore"
+    },
+    {
+        'id': 'crisis',
+        'title': 'RELAZIONE IN CRISI',
+        'subtitle': 'E\' proprio finita?'
+    },
+    {
+        'id': 'angels',
+        'title': 'GLI ANGELI DEL CUORE',
+        'subtitle': 'Troverò l\'amore? E\' la persona giusta per me?'
+    },
+    {
+        'id': 'advice',
+        'title': "CONSIGLI D'AMORE",
+        'subtitle': 'Come devo comportarmi con il mio partner per migliorare il nostro rapporto'
+    },
+    {
+        'id': 'newmeet',
+        'title': 'NUOVI INCONTRI E CONOSCENZE',
+        'subtitle': 'Come andrà a finire?'
+    }
+]
 
+@app.route('/tarocchi-amore', strict_slashes=False)
+def love_tarot():
+    return render_template('love_tarot.html', 
+                         questions=LOVE_QUESTIONS,
+                         title="Tarocchi dell'Amore")
+
+@app.route('/tarocchi-amore/<question_id>', strict_slashes=False)
+def love_reading(question_id):
+    my_deck = cards.get_deck()
+    drawn_card = cards.get_card(my_deck)
+    reading = cards.get_love_reading(drawn_card, question_id)
+    question = next((q for q in LOVE_QUESTIONS if q['id'] == question_id), None)
+    
+    return render_template('love_card.html',
+                         card=drawn_card[0],
+                         reversed=drawn_card[1],
+                         reading=reading,
+                         question=question,
+                         title=question['title'])
+    
+# Tarocchi Si o No
+@app.route('/tarocchi-si-no', strict_slashes=False)
+def yesno_tarot():
+    return render_template('yesno_tarot.html', 
+                         title="Tarocchi Si o No")
+
+@app.route('/tarocchi-si-no/risposta', strict_slashes=False)
+def yesno_reading():
+    my_deck = cards.get_deck()
+    drawn_card = cards.get_card(my_deck)
+    response = cards.get_yesno_reading(drawn_card)
+    
+    return render_template('yesno_card.html',
+                         card=drawn_card[0],
+                         reversed=drawn_card[1],
+                         response=response,
+                         title="Il Responso dei Tarocchi")    

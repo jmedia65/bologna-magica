@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h1 class="mb-4">Tarocchi Si o No</h1>
+                    
+                    <p class="lead mb-4">
+                        Pensa intensamente alla tua domanda. I tarocchi ti daranno 
+                        una risposta chiara e diretta attraverso la saggezza delle carte.
+                    </p>
+                    
+                    <p class="mb-5">
+                        Ricorda: la domanda deve poter essere risposta con un semplice 
+                        Sì o No. Concentrati sulla tua domanda mentre ti prepari a 
+                        consultare le carte.
+                    </p>
+                    
+                    <a href="{{ url_for('yesno_reading') }}" 
+                       class="btn btn-primary btn-lg px-5">
+                        I Tarocchi Dicono...
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

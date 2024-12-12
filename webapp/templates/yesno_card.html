@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h2 class="mb-3">La risposta alla tua domanda è:</h2>
+                    
+                    <div class="display-1 mb-4 {% if response == 'SI' %}text-success{% else %}text-danger{% endif %}">
+                        {{ response }}
+                    </div>
+                    
+                    <h3 class="mb-3">LA CARTA CHE HAI ESTRATTO</h3>
+                    <h4 class="mb-3">{{ card.name }}{% if reversed %} - Capovolta{% endif %}</h4>
+                    
+                    {% if reversed %}
+                    <img src="/static/{{ card.image }}" style="transform: rotate(180deg)" class="mb-4" alt="{{ card.name }}">
+                    {% else %}
+                    <img src="/static/{{ card.image }}" class="mb-4" alt="{{ card.name }}">
+                    {% endif %}
+                    
+                    <div class="reading-text mb-4">
+                        {% if reversed %}
+                        {{ card.rdesc }}
+                        {% else %}
+                        {{ card.desc }}
+                        {% endif %}
+                    </div>
+                    
+                    <div class="d-grid gap-2 col-md-8 mx-auto">
+                        <!-- <a href="{{ url_for('yesno_reading') }}" 
+                           class="btn btn-primary">
+                            Fai un'altra domanda
+                        </a> -->
+                        <a href="{{ url_for('yesno_tarot') }}" 
+                           class="btn btn-outline-secondary">
+                            Torna all'inizio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

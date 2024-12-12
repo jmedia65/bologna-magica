@@ -1,27 +1,60 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="row">	
-	<div class="col-md-12">
-	{% if rev: %}
-	    <h2>{{ name }} - reversed</h2>
-	    <img src="/static/{{ image }}" style="transform: rotate(180deg)" />
-	    <p>{{ reversed_meaning }}</p>
-	    <!-- debug <p>cardtype: {{ cardtype }}</p> -->
-	{% else %}
-		{% if cardtype == "major": %}
-		    <h2>{{ name }}</h2>
-		    <img src="/static/{{ image }}" />
-		    <p>{{ meaning }}</p>
-		    <p><strong>message:</strong> {{ message }}</p>
-		    <!-- debug <p>cardtype: {{ cardtype }}</p> -->
-		{% else %}
-			<h2>{{ name }}</h2>
-		    <img src="/static/{{ image }}" />
-		    <p>{{ meaning }}</p>
-		    <!-- debug <p>cardtype: {{ cardtype }}</p> -->
-		{% endif %}
-	{% endif %}
-	<p style="margin-top: 10px"><a href="/one-card/{{ url }}">more about this card</a></p>
-	</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h2 class="mb-3">LA CARTA CHE HAI ESTRATTO</h2>
+                    
+                    <h3 class="mb-3">
+                        {{ name }}{% if rev %} - Capovolta{% endif %}
+                    </h3>
+                    
+                    {% if rev %}
+                    <img src="/static/{{ image }}" 
+                         style="transform: rotate(180deg)" 
+                         class="mb-4" 
+                         alt="{{ name }}" />
+                    <div class="reading-text mb-4">
+                        {{ reversed_meaning }}
+                    </div>
+                    {% else %}
+                        {% if cardtype == "major" %}
+                        <img src="/static/{{ image }}" 
+                             class="mb-4" 
+                             alt="{{ name }}" />
+                        <div class="reading-text mb-4">
+                            {{ meaning }}
+                            <p class="mt-3"><strong>Messaggio:</strong> {{ message }}</p>
+                        </div>
+                        {% else %}
+                        <img src="/static/{{ image }}" 
+                             class="mb-4" 
+                             alt="{{ name }}" />
+                        <div class="reading-text mb-4">
+                            {{ meaning }}
+                        </div>
+                        {% endif %}
+                    {% endif %}
+                    
+                    <div class="d-grid gap-2 col-md-8 mx-auto">
+                        <a href="/one-card/{{ url }}" 
+                           class="btn btn-primary">
+                            Scopri di più su questa carta
+                        </a>
+                        <a href="{{ url_for('one_card') }}" 
+                           class="btn btn-outline-primary">
+                            Estrai un'altra carta
+                        </a>
+                        <a href="{{ url_for('one_card_tarot') }}" 
+                           class="btn btn-outline-secondary">
+                            Torna all'inizio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

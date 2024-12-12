@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h1 class="mb-4">Lettura dei Tarocchi a Tre Carte</h1>
+                    
+                    <p class="lead mb-4">
+                        Con questa lettura gratuita dei Tarocchi a 3 carte, riceverete consigli su:
+                        <strong>Passato, Presente, Futuro</strong>
+                    </p>
+                    
+                    <p class="mb-4">
+                        Questo metodo di lettura dei Tarocchi offre una visione più 
+                        approfondita del tuo cammino personale, mostrando:
+                    </p>
+                    
+                    <div class="row mb-5">
+                        <div class="col-md-4">
+                            <h4 class="text-primary">Passato</h4>
+                            <p>Le influenze del passato che hanno contribuito alla situazione attuale</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4 class="text-primary">Presente</h4>
+                            <p>Le energie e le sfide che stai affrontando nel momento attuale</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4 class="text-primary">Futuro</h4>
+                            <p>Le potenziali direzioni verso cui ti stai muovendo</p>
+                        </div>
+                    </div>
+                    
+                    <p class="mb-5">
+                        Concentrati sulla tua domanda mentre ti prepari a consultare le carte.
+                        Lascia che la saggezza dei Tarocchi ti guidi attraverso il tempo.
+                    </p>
+                    
+                    <a href="{{ url_for('more_cards') }}" 
+                       class="btn btn-primary btn-lg px-5">
+                        Scopri il Tuo Cammino
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
