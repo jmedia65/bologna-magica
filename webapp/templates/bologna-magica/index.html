@@ -1,0 +1,80 @@
+{# bologna-magica/index.html #}
+{% extends "bologna-magica/_content_base.html" %}
+
+{% block page_title %}Bologna Magica: Un Viaggio nei Misteri della Città delle Torri{% endblock %}
+
+{% block page_subtitle %}Dove la Storia della Magia Incontra i Tarocchi{% endblock %}
+
+{% block page_content %}
+<div class="row">
+    <div class="col-lg-8">
+        <div class="mb-5">
+            <p class="lead">
+                Bologna, città dei portici e delle torri, custodisce nei suoi vicoli medievali 
+                una storia ricca di mistero e magia. Dai tarocchi agli alchimisti, dagli astrologi 
+                agli esoteristi, la nostra città è sempre stata un crocevia di saperi arcani e 
+                tradizioni magiche.
+            </p>
+        </div>
+
+        <section class="mb-5">
+            <h2>Esplora i Percorsi Magici</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5">Il Percorso dei Tarocchi</h3>
+                            <p>Scopri i luoghi dove nacquero i tarocchi e la loro storia secolare.</p>
+                            <a href="/bologna-magica/percorsi/tarocchi" class="btn btn-outline-primary">Scopri di più</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Similar cards for other paths -->
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2>Storia e Misteri</h2>
+            <p>Bologna è stata definita "la dotta" non solo per la sua università, ma anche per 
+            essere stata nei secoli un centro di conoscenze esoteriche e magiche...</p>
+            <a href="/bologna-magica/storia-misteri" class="btn btn-link">Leggi di più →</a>
+        </section>
+
+        <div class="testimonial bg-light p-4 rounded">
+            <p class="fst-italic">
+                "Come bolognese, ho sempre sentito il fascino dei misteri della nostra città. 
+                Oggi voglio condividere queste storie con voi, per mantenere viva una tradizione 
+                che ha reso Bologna unica nel mondo."
+            </p>
+            <footer class="blockquote-footer">
+                Max, creatore di Bologna Magica
+            </footer>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="h5 mb-0">Consulta i Tarocchi</h3>
+            </div>
+            <div class="card-body">
+                <div class="d-grid gap-2">
+                    <a href="/tarocchi-amore" class="btn btn-primary">Tarocchi dell'Amore</a>
+                    <a href="/tarocchi-si-no" class="btn btn-outline-primary">Tarocchi Si o No</a>
+                    <a href="/three-cards-tarot" class="btn btn-outline-primary">Lettura Tre Carte</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3 class="h5 mb-0">Curiosità</h3>
+            </div>
+            <div class="card-body">
+                <p>Sapevi che la prima rappresentazione dell'Appeso dei Tarocchi si trova 
+                nella Basilica di San Petronio?</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

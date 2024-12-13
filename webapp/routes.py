@@ -189,4 +189,17 @@ def yesno_reading():
                          card=drawn_card[0],
                          reversed=drawn_card[1],
                          response=response,
-                         title="Il Responso dei Tarocchi")    
+                         title="Il Responso dei Tarocchi")
+    
+# Bologna Magica routes
+@app.route('/bologna-magica')
+def bologna_magica():
+    return render_template('bologna-magica/index.html')
+
+@app.route('/bologna-magica/percorsi/<path>')
+def bologna_percorsi(path):
+    return render_template(f'bologna-magica/percorsi/{path}.html')
+
+@app.route('/bologna-magica/<path>')
+def bologna_page(path):
+    return render_template(f'bologna-magica/{path}.html')    

@@ -1,0 +1,41 @@
+{# _content_base.html #}
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-4">
+    {% if breadcrumb %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/bologna-magica">Bologna Magica</a></li>
+            {% if section_name %}
+            <li class="breadcrumb-item active" aria-current="page">{{ section_name }}</li>
+            {% endif %}
+        </ol>
+    </nav>
+    {% endif %}
+
+    <article class="content-article">
+        <header class="content-header mb-4">
+            <h1 class="display-4">{% block page_title %}{% endblock %}</h1>
+            {% if subtitle %}
+            <p class="lead text-muted">{% block page_subtitle %}{% endblock %}</p>
+            {% endif %}
+        </header>
+
+        <div class="content-body">
+            {% block page_content %}{% endblock %}
+        </div>
+
+        {% if show_cta %}
+        <div class="cta-section my-5 p-4 bg-light rounded">
+            <h3 class="text-center mb-3">Scopri il Tuo Destino con i Tarocchi</h3>
+            <div class="d-grid gap-2 col-md-8 mx-auto">
+                <a href="/tarocchi-amore" class="btn btn-primary">Tarocchi dell'Amore</a>
+                <a href="/tarocchi-si-no" class="btn btn-outline-primary">Tarocchi Si o No</a>
+            </div>
+        </div>
+        {% endif %}
+    </article>
+</div>
+{% endblock %}

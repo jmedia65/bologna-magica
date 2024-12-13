@@ -1,38 +1,149 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="row">
+    <div class="col-lg-8">
+        <!-- Hero Section -->
+        <section class="mb-5">
+            <h1 class="display-4 mb-4">Bologna Magica</h1>
+            <p class="lead">
+                Bologna nasconde un'anima magica nei suoi portici secolari. Dai tarocchi 
+                agli alchimisti, dalle streghe agli astrologi: scopri i misteri della città 
+                delle torri e consulta l'antica saggezza dei tarocchi.
+            </p>
+        </section>
 
-    <h1>Benvenuti a Bologna Magica</h1>
+        <!-- Tarot Section -->
+        <section class="mb-5">
+            <h2 class="h3 mb-4">Consulta i Tarocchi</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5">Tarocchi dell'Amore</h3>
+                            <p>Ricevi risposte sulle questioni del cuore e scopri cosa ti riserva 
+                            il destino in amore.</p>
+                            <a href="/tarocchi-amore" class="btn btn-primary">Consulta Ora</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5">Tarocchi Si o No</h3>
+                            <p>Hai una domanda che richiede una risposta chiara? I tarocchi ti 
+                            guideranno verso la decisione giusta.</p>
+                            <a href="/tarocchi-si-no" class="btn btn-primary">Chiedi Ora</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5">Lettura Una Carta</h3>
+                            <p>Una singola carta può contenere il messaggio di cui hai bisogno 
+                            in questo momento.</p>
+                            <a href="/one-card-tarot" class="btn btn-primary">Estrai la Carta</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5">Lettura Tre Carte</h3>
+                            <p>Esplora passato, presente e futuro con una lettura approfondita 
+                            dei tarocchi.</p>
+                            <a href="/three-cards-tarot" class="btn btn-primary">Inizia la Lettura</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <p>Hai difficoltà a prendere una decisione? Preoccupato per il futuro? Preoccupato che le forze segrete stiano controllando il tuo destino? Allora è il momento di consultare i Tarocchi</p>
+        <!-- Bologna Magica Section -->
+        <section class="mb-5">
+            <h2 class="h3 mb-4">Scopri la Bologna Magica</h2>
+            
+            <!-- Main CTAs -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="card h-100 bg-light border-primary">
+                        <div class="card-body">
+                            <h3 class="h4 text-primary">La Città Magica</h3>
+                            <p class="mb-3">Immergiti nell'atmosfera misteriosa di Bologna, dove ogni portico 
+                            nasconde una storia e ogni torre custodisce un segreto. Un viaggio nel cuore 
+                            esoterico della città delle torri.</p>
+                            <a href="/bologna-magica" class="btn btn-primary">Scopri la Città Magica →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 bg-light border-primary">
+                        <div class="card-body">
+                            <h3 class="h4 text-primary">Storia & Misteri</h3>
+                            <p class="mb-3">Dalle streghe agli alchimisti, dai tarocchi ai templari: 
+                            esplora le storie misteriose e i segreti nascosti che hanno reso Bologna 
+                            una città unica al mondo.</p>
+                            <a href="/bologna-magica/storia-misteri" class="btn btn-primary">Esplora i Misteri →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-	<hr />
+            <!-- Percorsi Cards -->
+            <h3 class="h4 mb-4">I Percorsi Magici</h3>
+            <div class="card">
+                <div class="card-body">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <h4 class="h5">Percorso dei Tarocchi</h4>
+                            <p>Visita i luoghi dove nacquero i tarocchi bolognesi.</p>
+                            <a href="/bologna-magica/percorsi/tarocchi" class="btn btn-link px-0">Scopri di più →</a>
+                        </div>
+                        <div class="col-md-4">
+                            <h4 class="h5">Percorso Esoterico</h4>
+                            <p>Esplora il lato misterioso della città delle torri.</p>
+                            <a href="/bologna-magica/percorsi/esoterico" class="btn btn-link px-0">Scopri di più →</a>
+                        </div>
+                        <div class="col-md-4">
+                            <h4 class="h5">Percorso Alchemico</h4>
+                            <p>Segui le tracce degli antichi alchimisti bolognesi.</p>
+                            <a href="/bologna-magica/percorsi/alchemico" class="btn btn-link px-0">Scopri di più →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>    
+    </div>
 
-    <h2>Qui bisogna scrivere qualcosa per spiegare le opzioni:</h2>
+    <!-- Sidebar -->
+    <div class="col-lg-4">
+        <!-- About Box -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="h5 mb-0">Il Progetto</h3>
+            </div>
+            <div class="card-body">
+                <p>Bologna Magica nasce dal desiderio di preservare e condividere il patrimonio 
+                esoterico della nostra città. Un viaggio attraverso i secoli, dalle origini dei 
+                tarocchi ai misteri ancora da svelare.</p>
+                <footer class="blockquote-footer mt-2">
+                    Max, bolognese e creatore di Bologna Magica
+                </footer>
+            </div>
+        </div>
 
-    <p><strong><a href="/tarocchi-amore">Tarocchi dell'Amore</a></strong>
-        <br />amore blah blah</p>
-
-    <p><strong><a href="/tarocchi-si-no">Tarocchi Si o No</a></strong>
-        <br />si o no blah blah</p>    
-
-    <p><strong><a href="/one-card-tarot">Tarocchi Una Carta</a></strong>
-        <br />una carta blah blah</p>
-
-    <p><strong><a href="/three-cards-tarot">Tarocchi Tre Carte</a></strong>
-        <br />tre carte blah blah</p>
-
-    <p><strong><a href="/tarot-study">Studia le Carte dei Tarocchi</a></strong>
-        <br />tutte le carte dei tarocchi</p>
-
-	<hr />
-
-    <h3>What is this website?</h3>
-
-    <p>This little website is a simple application written in Python to draw one or three randomly selected tarot cards from a dictionary of 78 descriptions and image references.  The <a href="https://github.com/jeremytarling/python-tarot">source code is here</a> - there are no license restrictions, please feel free to fork or re-use.</p>
-
-    <p>The tarot images and descriptions are the late Dr Yoav Ben Dov's excellent restoration</a> of <a href="https://gallica.bnf.fr/ark:/12148/btv1b10520316w/f131.item" target="_blank">Nicholas Conver's deck</a> from 1760, which he kindly made available under the <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative Commons by-nc-sa licence</a> - please be sure to link back to <a href="http://www.cbdtarot.com/download/" target="_blank">his website</a> if you use them.</p>
-
-    <p>As for me, my name is <a href="https://linktr.ee/jeremytarling">Jeremy Tarling</a> and I work as a metadata specialist at the BBC. I've been fascinated by the tarot since childhood when my aunty first introduced me to the cards.</p>
-
+        <!-- Study Box -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="h5 mb-0">Studia i Tarocchi</h3>
+            </div>
+            <div class="card-body">
+                <p>Scopri il significato profondo di ogni carta e impara l'antica arte della lettura 
+                dei tarocchi.</p>
+                <a href="/tarot-study" class="btn btn-outline-primary">Inizia a Studiare</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
