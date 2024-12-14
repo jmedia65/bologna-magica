@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <!-- Cookie Alert -->
     <link rel="stylesheet" href="/static/css/cookiealert.css">
-    <link rel="icon" type="image/gif" href="/static/images/favicon.gif" />
+    <link rel="icon" type="image/png" href="/static/images/favicon.png" />
   </head>
 
   <body class="d-flex flex-column h-100">
@@ -93,7 +93,7 @@
 
     <!-- START Bootstrap-Cookie-Alert -->
     <div class="alert text-center cookiealert" role="alert">
-      Utilizziamo i cookie per assicurarci di darti la migliore esperienza sul nostro sito web. Se continui ad utilizzare questo sito, acconsenti al nostro utilizzo dei cookie. <a href="https://cookiesandyou.com/" target="_blank">Informativa Cookie</a>
+      Utilizziamo i cookie per assicurarci di darti la migliore esperienza sul nostro sito web. Se continui ad utilizzare questo sito, acconsenti al nostro utilizzo dei cookie. <a href="{{ url_for('cookies') }}" target="_blank">Informativa Cookie</a>
       <button type="button" class="btn btn-primary btn-sm acceptcookies">
           Accetto
       </button>
