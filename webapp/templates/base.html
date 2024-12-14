@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="h-100">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +15,7 @@
     <link rel="icon" type="image/gif" href="/static/images/favicon.gif" />
   </head>
 
-  <body class="bg-light">
+  <body class="d-flex flex-column h-100">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
@@ -60,13 +60,15 @@
       </div>
     </nav>
 
-    <main class="py-5">
-      <div class="container">
+    <!-- Main content -->
+    <main class="flex-shrink-0">
+      <div class="container py-5">
         {% block content %}{% endblock %}
       </div>
     </main>
 
-    <footer class="bg-dark text-light py-4 mt-5">
+    <!-- Footer -->
+    <footer class="footer mt-auto py-4 bg-dark text-light">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
