@@ -235,6 +235,17 @@ def bologna_percorsi(path):
 def bologna_page(path):
     return render_template(f'bologna-magica/{path}.html')
 
-# Errors
+# Error handlers
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('utils/errors/404.html'), 404
 
-    
+@app.errorhandler(500)
+def internal_error(error):
+    return render_template('utils/errors/500.html'), 500
+
+# # Test 500 -- remove or comment out
+# @app.route('/test-500')
+# def test_500():
+#     # Deliberately raise an exception
+#     raise Exception("Test 500 error page")    

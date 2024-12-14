@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h1 class="display-1 text-muted mb-4">404</h1>
+            <h2 class="h3 mb-4">Pagina Non Trovata</h2>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <p class="lead mb-4">
+                        Come un arcano misterioso che sfugge alla vista, la pagina che cerchi 
+                        sembra essere svanita nel nulla.
+                    </p>
+                    <p class="mb-4">
+                        Forse i tarocchi possono guidarti verso ciò che stai cercando?
+                    </p>
+                    
+                    <div class="d-grid gap-2 col-md-8 mx-auto">
+                        <a href="/" class="btn btn-primary">Torna alla Home</a>
+                        <a href="/tarocchi-si-no" class="btn btn-outline-primary">
+                            Consulta i Tarocchi
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-muted">
+                <small>Error Code: 404 - Page Not Found</small>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
