@@ -248,4 +248,18 @@ def internal_error(error):
 # @app.route('/test-500')
 # def test_500():
 #     # Deliberately raise an exception
-#     raise Exception("Test 500 error page")    
+#     raise Exception("Test 500 error page")
+
+# Cookies and Privacy
+@app.route('/privacy')
+def privacy():
+    return render_template('utils/privacy.html', title="Privacy Policy")
+
+@app.route('/cookies')
+def cookies():
+    return render_template('utils/cookies.html', title="Cookie Policy")
+
+# About Us
+@app.route('/about')
+def about():
+    return render_template('utils/about.html', title="Chi Siamo")

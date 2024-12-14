@@ -12,6 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Cookie Alert -->
+    <link rel="stylesheet" href="/static/css/cookiealert.css">
     <link rel="icon" type="image/gif" href="/static/images/favicon.gif" />
   </head>
 
@@ -75,14 +77,31 @@
             <h5>Bologna Magica</h5>
             <p class="mb-0">Esplora i misteri e la magia della città delle torri</p>
           </div>
-          <div class="col-md-6 text-md-end">
-            <p class="mb-0"><small>© 2024 Bologna Magica. Tutti i diritti riservati.</small></p>
+          <div class="col-md-6">
+            <div class="text-md-end">
+              <p class="mb-2"><small>© 2024 Bologna Magica. Tutti i diritti riservati.</small></p>
+              <nav class="nav justify-content-md-end">
+                <a href="{{ url_for('about') }}" class="nav-link px-2 text-light">Chi Siamo</a>
+                <a href="{{ url_for('privacy') }}" class="nav-link px-2 text-light">Privacy</a>
+                <a href="{{ url_for('cookies') }}" class="nav-link px-2 text-light">Cookie</a>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
     </footer>
 
+    <!-- START Bootstrap-Cookie-Alert -->
+    <div class="alert text-center cookiealert" role="alert">
+      Utilizziamo i cookie per assicurarci di darti la migliore esperienza sul nostro sito web. Se continui ad utilizzare questo sito, acconsenti al nostro utilizzo dei cookie. <a href="https://cookiesandyou.com/" target="_blank">Informativa Cookie</a>
+      <button type="button" class="btn btn-primary btn-sm acceptcookies">
+          Accetto
+      </button>
+    </div>
+    <!-- END Bootstrap-Cookie-Alert -->
+
     <!-- Bootstrap 5 Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js//cookiealert.js"></script>
   </body>
 </html>

@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="mb-4">Informativa sulla Privacy</h1>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="h5">Ultimo aggiornamento: 14 Dicembre 2024</h2>
+                    <p>Questa informativa sulla privacy si applica ai cittadini e ai residenti permanenti legali dello Spazio Economico Europeo.</p>
+                </div>
+            </div>
+
+            <section class="mb-4">
+                <h2 class="h4">1. Introduzione</h2>
+                <p>La tua privacy è importante per noi. In questa informativa spieghiamo quali dati raccogliamo e come li utilizziamo quando visiti Bologna Magica.</p>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="h4">2. Dati che raccogliamo</h2>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h3 class="h5">2.1 Dati di navigazione</h3>
+                        <p>Raccogliamo automaticamente alcuni dati tecnici necessari per il funzionamento del sito:</p>
+                        <ul class="mb-0">
+                            <li>Indirizzo IP (in forma anonimizzata)</li>
+                            <li>Tipo di browser e dispositivo</li>
+                            <li>Pagine visitate sul nostro sito</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="h4">3. Come utilizziamo i tuoi dati</h2>
+                <p>Utilizziamo i dati raccolti per:</p>
+                <ul>
+                    <li>Fornire e migliorare i nostri servizi</li>
+                    <li>Analizzare come viene utilizzato il sito</li>
+                    <li>Proteggere la sicurezza del sito</li>
+                </ul>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="h4">4. Base giuridica del trattamento</h2>
+                <p>Trattiamo i tuoi dati personali in base a:</p>
+                <ul>
+                    <li>Il tuo consenso esplicito</li>
+                    <li>I nostri legittimi interessi commerciali</li>
+                    <li>Obblighi legali applicabili</li>
+                </ul>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="h4">5. I tuoi diritti</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <p>Hai il diritto di:</p>
+                        <ul class="mb-0">
+                            <li>Accedere ai tuoi dati personali</li>
+                            <li>Correggere dati inaccurati</li>
+                            <li>Richiedere la cancellazione dei dati</li>
+                            <li>Opporti al trattamento dei dati</li>
+                            <li>Richiedere la portabilità dei dati</li>
+                            <li>Revocare il consenso in qualsiasi momento</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="h4">6. Sicurezza dei dati</h2>
+                <p>Adottiamo misure di sicurezza tecniche e organizzative appropriate per proteggere i tuoi dati personali da accessi non autorizzati, perdite o modifiche.</p>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="h4">7. Link a siti di terze parti</h2>
+                <p>Il nostro sito può contenere link ad altri siti web. Non siamo responsabili per le pratiche sulla privacy di questi siti e ti invitiamo a leggere le loro informative sulla privacy.</p>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="h4">8. Modifiche all'informativa</h2>
+                <p>Ci riserviamo il diritto di modificare questa informativa in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina con la data di ultimo aggiornamento.</p>
+            </section>
+
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h2 class="h4">Contatti</h2>
+                    <p>Per qualsiasi domanda riguardante questa informativa sulla privacy o il trattamento dei tuoi dati, non esitare a <a href="{{ url_for('about', _anchor='contatti') }}">contattaci</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

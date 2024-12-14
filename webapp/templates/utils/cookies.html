@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="mb-4">Informativa sui Cookie</h1>
+            
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="h5">Ultimo aggiornamento: 14 Dicembre 2024</h2>
+                    <p>La presente informativa si applica ai cittadini e ai residenti permanenti legali dello Spazio Economico Europeo.</p>
+                </div>
+            </div>
+
+            <section class="mb-4">
+                <h2 class="h4">1. Cosa sono i cookie?</h2>
+                <p>I cookie sono piccoli file di testo che vengono salvati sul tuo dispositivo quando visiti il nostro sito web. Questi file permettono al sito di ricordare le tue preferenze e di migliorare la tua esperienza di navigazione.</p>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="h4">2. Quali cookie utilizziamo</h2>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h3 class="h5">Cookie tecnici essenziali</h3>
+                        <p>Questi cookie sono necessari per il funzionamento del sito. Senza questi cookie, il sito non funzionerebbe correttamente.</p>
+                    </div>
+                </div>
+                
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h3 class="h5">Cookie analitici</h3>
+                        <p>Utilizziamo questi cookie per capire come i visitatori interagiscono con il sito. Tutte le informazioni raccolte sono anonime.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="h4">3. Il tuo consenso</h2>
+                <p>Al primo accesso al sito, ti verrà chiesto di accettare l'uso dei cookie. Puoi modificare le tue preferenze in qualsiasi momento attraverso le impostazioni del tuo browser.</p>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="h4">4. Come gestire i cookie</h2>
+                <p>Puoi controllare e/o eliminare i cookie come desideri. Puoi eliminare tutti i cookie già presenti sul tuo computer e impostare la maggior parte dei browser in modo da bloccarne l'installazione.</p>
+                <div class="alert alert-info">
+                    <strong>Nota:</strong> Se disattivi completamente i cookie, potresti non essere in grado di utilizzare tutte le funzionalità del sito.
+                </div>
+            </section>
+
+            <section class="mb-4">
+                <h2 class="h4">5. I tuoi diritti</h2>
+                <p>In conformità con il GDPR, hai diritto a:</p>
+                <ul>
+                    <li>Essere informato sulla raccolta e l'uso dei tuoi dati</li>
+                    <li>Accedere ai tuoi dati personali</li>
+                    <li>Correggere informazioni inesatte</li>
+                    <li>Richiedere la cancellazione dei dati</li>
+                </ul>
+            </section>
+
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h2 class="h4">Contattaci</h2>
+                    <p>Per qualsiasi domanda riguardante i cookie e la privacy dei tuoi dati, non esitare a <a href="{{ url_for('about', _anchor='contatti') }}">contattaci</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
