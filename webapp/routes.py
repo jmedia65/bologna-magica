@@ -13,12 +13,12 @@ def index():
 	return render_template("index.html")
 
 # tarot study
-@app.route('/tarot-study', strict_slashes=False)
+@app.route('/studia-i-tarocchi', strict_slashes=False)
 def all_cards():
 	return render_template("tarot_study.html")
 
 # reading list
-@app.route('/reading-list', strict_slashes=False)
+@app.route('/letture-consigliate', strict_slashes=False)
 def reading_list():
 	return render_template("reading_list.html")
 
@@ -83,11 +83,11 @@ def specific_card(card_url):
 	if my_card['sequence'] > 1 :
 		previous_card_url = '/one-card/' + list(filter(lambda previous_card: previous_card['sequence'] == (my_card['sequence'] -1), my_deck))[0]['url']
 	else :
-		previous_card_url = '/tarot-study'
+		previous_card_url = '/studia-i-tarocchi'
 	if my_card['sequence'] < 78 :
 		next_card_url = '/one-card/' + list(filter(lambda next_card: next_card['sequence'] == (my_card['sequence'] +1), my_deck))[0]['url']
 	else :
-		next_card_url = '/tarot-study'
+		next_card_url = '/studia-i-tarocchi'
 	if my_card['cardtype'] == "major" :
 		return render_template("specific_card.html",
 								name = my_card['name'],
@@ -202,4 +202,8 @@ def bologna_percorsi(path):
 
 @app.route('/bologna-magica/<path>')
 def bologna_page(path):
-    return render_template(f'bologna-magica/{path}.html')    
+    return render_template(f'bologna-magica/{path}.html')
+
+# Errors
+
+    
