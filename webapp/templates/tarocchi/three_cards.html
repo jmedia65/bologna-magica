@@ -17,17 +17,22 @@
                         </h4>
                         
                         {% if card[1] %}
-                            <img src="/static/{{ card[0].image }}" 
-                                 style="transform: rotate(180deg)"
-                                 class="mb-3"
-                                 alt="{{ card[0].name }}" />
+                            <img src="{{ card[0].image }}"
+                                width="293"
+                                height="567" 
+                                style="max-width: 100%; height: auto; transform: rotate(180deg)"
+                                class="mb-3"
+                                alt="{{ card[0].name }}" />
                             <div class="reading-text">
                                 {{ card[0].rdesc }}
                             </div>
                         {% else %}
-                            <img src="/static/{{ card[0].image }}"
-                                 class="mb-3"
-                                 alt="{{ card[0].name }}" />
+                            <img src="{{ card[0].image }}"
+                                width="293"
+                                height="567"
+                                style="max-width: 100%; height: auto;" 
+                                class="mb-3"
+                                alt="{{ card[0].name }}" />
                             <div class="reading-text">
                                 {{ card[0].desc }}
                             </div>

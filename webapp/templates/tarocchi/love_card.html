@@ -13,9 +13,9 @@
                     <h4 class="mb-3">{{ card.name }}{% if reversed %} - Capovolta{% endif %}</h4>
                     
                     {% if reversed %}
-                    <img src="/static/{{ card.image }}" style="transform: rotate(180deg)" class="mb-4" alt="{{ card.name }}">
+                    <img src="{{ card.image }}" width="293" height="567" style="max-width: 100%; height: auto; transform: rotate(180deg)" class="mb-4" alt="{{ card.name }}">
                     {% else %}
-                    <img src="/static/{{ card.image }}" class="mb-4" alt="{{ card.name }}">
+                    <img src="{{ card.image }}" width="293" height="567" style="max-width: 100%; height: auto;" class="mb-4" alt="{{ card.name }}">
                     {% endif %}
                     
                     <div class="reading-text mb-4">

@@ -12,26 +12,34 @@
                     </h3>
                     
                     {% if rev %}
-                    <img src="/static/{{ image }}" 
-                         style="transform: rotate(180deg)" 
-                         class="mb-4" 
-                         alt="{{ name }}" />
+                    <img src="{{ image }}"
+                        width="293"
+                        height="567"     
+                        style="max-width: 100%; height: auto; transform: rotate(180deg)" 
+                        class="mb-4" 
+                        alt="{{ name }}" />
                     <div class="reading-text mb-4">
                         {{ reversed_meaning }}
                     </div>
                     {% else %}
                         {% if cardtype == "major" %}
-                        <img src="/static/{{ image }}" 
-                             class="mb-4" 
-                             alt="{{ name }}" />
+                        <img src="{{ image }}"
+                            width="293"
+                            height="567"
+                            style="max-width: 100%; height: auto;"                          
+                            class="mb-4" 
+                            alt="{{ name }}" />
                         <div class="reading-text mb-4">
                             {{ meaning }}
                             <p class="mt-3"><strong>Messaggio:</strong> {{ message }}</p>
                         </div>
                         {% else %}
-                        <img src="/static/{{ image }}" 
-                             class="mb-4" 
-                             alt="{{ name }}" />
+                        <img src="{{ image }}"
+                            width="293"
+                            height="567"
+                            style="max-width: 100%; height: auto;"  
+                            class="mb-4" 
+                            alt="{{ name }}" />
                         <div class="reading-text mb-4">
                             {{ meaning }}
                         </div>
