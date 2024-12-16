@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="it" class="h-100">
-  <head>
-    <!-- Character encoding declaration (must be within first 1024 bytes) -->
+<html lang="it" dir="ltr" class="h-100">
+  <head>    
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Performance and security headers -->
+    <meta http-equiv="Cache-Control" content="max-age=31536000">
+    <meta http-equiv="x-dns-prefetch-control" content="off">
+    <meta name="googlebot" content="notranslate">
+    <meta name="renderer" content="webkit">
     
-    <!-- Preload critical font -->
+    <!-- Preload and preconnect directives -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preload" href="/static/icons/fonts/bootstrap-icons.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- SEO Meta Tags -->
@@ -111,18 +118,18 @@
       </div>
     </footer>
 
-    <!-- START Bootstrap-Cookie-Alert -->
-    <div class="alert text-center cookiealert" role="alert">
-      Utilizziamo i cookie per assicurarci di darti la migliore esperienza sul nostro sito web. Se continui ad utilizzare questo sito, acconsenti al nostro utilizzo dei cookie. <a href="{{ url_for('cookies') }}" target="_blank">Informativa Cookie</a>
+    <!-- Start cookie alert -->
+    <div class="alert text-center cookiealert" role="alert" style="background-color:#3b3b3b">
+      Utilizziamo i cookie per assicurarci di darti la migliore esperienza sul nostro sito web. Se continui ad utilizzare questo sito, acconsenti al nostro utilizzo dei cookie. <a href="{{ url_for('cookies') }}" target="_blank" style="color: white;">Informativa Cookie</a>
       <button type="button" class="btn btn-primary btn-sm acceptcookies">
           Accetto
       </button>
     </div>
-    <!-- END Bootstrap-Cookie-Alert -->
+    <!-- End cookie alert -->
 
     <!-- Bootstrap Bundle with Popper (deferred) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" defer></script>
-    <!-- Cookie alert -->
+    <!-- Cookie alert JS (deferred) -->
     <script src="/static/js/cookiealert.js" defer></script>
   </body>
 </html>
