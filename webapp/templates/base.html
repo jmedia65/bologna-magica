@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="it" class="h-100">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Character encoding declaration (must be within first 1024 bytes) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Preload critical font -->
+    <link rel="preload" href="/static/icons/fonts/bootstrap-icons.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Scopri i misteri di Bologna e consulta i Tarocchi. Un viaggio tra storia esoterica, cartomanzia e luoghi magici della città delle torri.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{% if title %}{{ title }} | Bologna Magica{% else %}Bologna Magica - Tarocchi e Misteri della Città delle Torri{% endif %}">
+    <meta property="og:description" content="Scopri i misteri di Bologna e consulta i Tarocchi. Un viaggio tra storia esoterica, cartomanzia e luoghi magici della città delle torri.">
+    <!-- <meta property="og:image" content="/static/images/og-image.jpg"> -->
+    <meta property="og:url" content="https://bolognamagica.com{{ request.path }}">
+    
+    <!-- Page title -->
     {% if title %}
     <title>{{ title }} | Bologna Magica</title>
     {% else %}
     <title>Bologna Magica - Tarocchi e Misteri della Città delle Torri</title>
     {% endif %}
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <!-- Cookie Alert -->
+
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="/static/css/purged-bootstrap.min.css">
+    <link rel="stylesheet" href="/static/icons/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/css/theme.css">
+    
+    <!-- Non-critical CSS -->
     <link rel="stylesheet" href="/static/css/cookiealert.css">
-    <link rel="icon" type="image/png" href="/static/images/favicon.png" />
-  </head>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+    
+</head>
 
   <body class="d-flex flex-column h-100">
     <!-- Navigation -->
@@ -100,8 +120,9 @@
     </div>
     <!-- END Bootstrap-Cookie-Alert -->
 
-    <!-- Bootstrap 5 Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/static/js//cookiealert.js"></script>
+    <!-- Bootstrap Bundle with Popper (deferred) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- Cookie alert -->
+    <script src="/static/js/cookiealert.js" defer></script>
   </body>
 </html>

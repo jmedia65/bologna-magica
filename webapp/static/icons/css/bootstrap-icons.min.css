@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "bootstrap-icons";
+  src: url("../fonts/bootstrap-icons.woff2") format("woff2");
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Icons from alchemico.html */
+.bi-tools::before {
+  content: "\f764";
+}
+.bi-building::before {
+  content: "\f1ad";
+}
+.bi-triangle::before {
+  content: "\f5a7";
+}
+.bi-star::before {
+  content: "\f586";
+}
+
+/* Icons from esoterico.html */
+.bi-moon-stars::before {
+  content: "\f5b7";
+}
+.bi-compass::before {
+  content: "\f2e7";
+}
+.bi-diagram-3::before {
+  content: "\f2e1";
+}
+.bi-shield::before {
+  content: "\f565";
+}
+.bi-circle::before {
+  content: "\f287";
+}
+.bi-grid::before {
+  content: "\f3f0";
+}
+
+/* Icons from tarocchi.html */
+.bi-gem::before {
+  content: "\f47c";
+}
+.bi-star::before {
+  content: "\f586";
+}
+.bi-fire::before {
+  content: "\f4d5";
+}
+.bi-book::before {
+  content: "\f195";
+}
+.bi-house::before {
+  content: "\f425";
+}
+.bi-palette::before {
+  content: "\f37e";
+}
+.bi-sun::before {
+  content: "\f5a2";
+}
+.bi-stars::before {
+  content: "\f5c6";
+}
+
+/* Icons from about.html */
+.bi-envelope::before {
+  content: "\f32f";
+}
+
+/* Icons from utils */
+.bi-brightness-high::before {
+  content: "\f1a5";
+}
+.bi-globe::before {
+  content: "\f3c0";
+}
+.bi-people::before {
+  content: "\f63c";
+}
+.bi-people-fill::before {
+  content: "\f4cf";
+}
+.bi-flask::before {
+  content: "\f461";
+}
+
+/* Missed icons */
+.bi-diamond-fill::before {
+  content: "\f2ef";
+}
+
+.bi-star-fill::before {
+  content: "\f586";
+}

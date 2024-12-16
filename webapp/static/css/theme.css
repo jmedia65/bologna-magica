@@ -1,0 +1,69 @@
+/* Custom theme overrides */
+:root {
+  --bs-primary: #6f42c1;
+  --bs-primary-rgb: 111, 66, 193;
+
+  /* Lighter shades for hover states and gradients */
+  --bs-primary-lighter: #7952b3;
+  --bs-primary-lightest: #8c68cd;
+
+  /* Darker shades for active states */
+  --bs-primary-darker: #593699;
+  --bs-primary-darkest: #432970;
+}
+
+/* Override primary button styles */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--bs-primary-lighter);
+  border-color: var(--bs-primary-lighter);
+}
+
+.btn-primary:active {
+  background-color: var(--bs-primary-darker) !important;
+  border-color: var(--bs-primary-darker) !important;
+}
+
+/* Override outline button styles */
+.btn-outline-primary {
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+/* Text colors */
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+/* Border colors */
+.border-primary {
+  border-color: var(--bs-primary) !important;
+}
+
+/* Link colors */
+a {
+  color: var(--bs-primary);
+}
+
+a:hover {
+  color: var(--bs-primary-darker);
+}
+
+/* Navbar customization */
+.navbar-dark {
+  background-color: var(--bs-primary-darkest) !important;
+}
+
+/* Card header customization */
+.card-header {
+  background-color: rgba(var(--bs-primary-rgb), 0.03);
+}
