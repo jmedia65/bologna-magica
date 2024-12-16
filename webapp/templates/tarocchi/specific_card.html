@@ -1,20 +1,55 @@
 {% extends "base.html" %}
+
+{# SEO Meta - Dynamic based on card #}
+{% block title %}{{ name }} | Significato e Interpretazione | Tarocchi di Bologna{% endblock %}
+{% block meta_description %}Scopri il significato completo della carta {{ name }}: interpretazione, messaggio spirituale e significato nella tradizione dei tarocchi bolognesi.{% endblock %}
+
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block og_image %}/static/images/og-image-tarocchi.jpg{% endblock %}
+{% block twitter_image_alt %}Carta dei Tarocchi: {{ name }}{% endblock %}
+
 {% block content %}
-<div class="row">	
-	<div class="col-md-12">
-	    <h2>{{ name }}</h2>
-	    <img src="{{ image }}" width="293" height="567" style="max-width: 100%; height: auto;" />
-	    {% if cardtype == "major": %}
-		    <p><strong>interpretation:</strong> {{ meaning }}</p>
-		    <p><strong>message:</strong> <em>{{ message }}</em></p>
-		   	<p><strong>if reversed:</strong> {{ reversed_meaning }}</p>
-		   	<!-- <p><strong>Golden Dawn title:</strong> {{ golden_dawn }}</p> -->
-		{% else %}
-		    <p><strong>interpretation:</strong> {{ meaning }}</p>
-		   	<p><strong>if reversed:</strong> {{ reversed_meaning }}</p>
-		   	<!-- <p><strong>Golden Dawn title:</strong> {{ golden_dawn }}</p> -->
-		{% endif %}
-		<p><a href="{{ previous }}">previous card</a> || <a href="{{ next }}">next card</a></p>
-	</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <article>
+                <h1>{{ name }}</h1>
+                <img src="{{ image }}" width="293" height="567" style="max-width: 100%; height: auto;" alt="{{ name }} - Tarocchi di Bologna" class="mb-4" />
+                
+                {% if cardtype == "major": %}
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <p><strong>Interpretazione:</strong> {{ meaning }}</p>
+                            <p class="mb-0"><strong>Messaggio:</strong> <em>{{ message }}</em></p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <p class="mb-0"><strong>Se Capovolta:</strong> {{ reversed_meaning }}</p>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <p><strong>Interpretazione:</strong> {{ meaning }}</p>
+                            <p class="mb-0"><strong>Se Capovolta:</strong> {{ reversed_meaning }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+
+                <div class="d-flex justify-content-between mb-4">
+                    <a href="{{ previous }}" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left-short"></i> Carta Precedente
+                    </a>
+                    <a href="{{ next }}" class="btn btn-outline-secondary">
+                        Carta Successiva <i class="bi bi-arrow-right-short"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
 </div>
 {% endblock %}

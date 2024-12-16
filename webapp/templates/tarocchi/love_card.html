@@ -1,4 +1,18 @@
 {% extends "base.html" %}
+
+{# SEO Meta - Minimal optimization for result page #}
+{% block title %}Responso dei Tarocchi dell'Amore | Bologna Magica{% endblock %}
+{% block meta_description %}Il responso dei tarocchi per la tua domanda d'amore. Consulta la saggezza delle carte per guidare il tuo cammino.{% endblock %}
+
+{# Canonical - Point to main love tarot page #}
+{% block canonical %}https://bolognamagica.com/tarocchi-amore{% endblock %}
+
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block og_image %}/static/images/og-image-tarocchi.jpg{% endblock %}
+{% block twitter_image_alt %}Responso dei Tarocchi dell'Amore{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="row justify-content-center">

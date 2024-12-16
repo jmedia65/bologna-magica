@@ -1,4 +1,16 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+
+{# SEO Meta #}
+{% block title %}Studia i Tarocchi: Guida Completa per Imparare i Tarocchi | Bologna Magica{% endblock %}
+{% block meta_description %}Impara i tarocchi con la nostra guida completa: significati, interpretazioni e simbologia degli Arcani Maggiori e Minori.{% endblock %}
+
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block og_image %}/static/images/og-image-tarocchi.jpg{% endblock %}
+{% block twitter_image_alt %}Guida allo Studio dei Tarocchi - Tradizione Bolognese{% endblock %}
+
+{% block content %}
 
 <div class="container">
   <div class="row">

@@ -1,4 +1,18 @@
 {% extends "base.html" %}
+
+{# SEO Meta #}
+{% block title %}Responso dei Tarocchi Si o No | Bologna Magica{% endblock %}
+{% block meta_description %}Il responso dei tarocchi alla tua domanda. Scopri il significato della carta {{ card.name }} e la risposta che le carte hanno rivelato per te.{% endblock %}
+
+{# Canonical - Point to main yes/no page #}
+{% block canonical %}https://bolognamagica.com/tarocchi-si-no{% endblock %}
+
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block og_image %}/static/images/og-image-tarocchi.jpg{% endblock %}
+{% block twitter_image_alt %}Carta dei Tarocchi: {{ card.name }}{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="row justify-content-center">
@@ -29,10 +43,6 @@
                     </div>
                     
                     <div class="d-grid gap-2 col-md-8 mx-auto">
-                        <!-- <a href="{{ url_for('yesno_reading') }}" 
-                           class="btn btn-primary">
-                            Fai un'altra domanda
-                        </a> -->
                         <a href="{{ url_for('yesno_tarot') }}" 
                            class="btn btn-outline-secondary">
                             Torna all'inizio

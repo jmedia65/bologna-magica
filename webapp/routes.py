@@ -26,8 +26,7 @@ def reading_list():
 # One Card In-Between Route
 @app.route('/one-card-tarot', strict_slashes=False)
 def one_card_tarot():
-    return render_template('tarocchi/one_card_tarot.html', 
-                         title="Estrai Una Carta dei Tarocchi")
+    return render_template('tarocchi/one_card_tarot.html')
 
 # Get One Card
 @app.route('/one-card', strict_slashes=False)
@@ -59,8 +58,7 @@ def one_card():
 # Three Cards In-Between Route
 @app.route('/three-cards-tarot', strict_slashes=False)
 def three_cards_tarot():
-    return render_template('tarocchi/three_cards_tarot.html', 
-                         title="Lettura dei Tarocchi: Passato, Presente e Futuro")
+    return render_template('tarocchi/three_cards_tarot.html')
 
 # get three cards
 @app.route('/three-cards', strict_slashes=False)
@@ -72,49 +70,9 @@ def more_cards():
 		my_card = cards.get_card(my_deck)
 		hand.append(my_card)
 		num +=1
-	return render_template("tarocchi/three_cards.html", hand = hand, title="Three card spread")
+	return render_template("tarocchi/three_cards.html", hand = hand)
 
-
-# get specific card
-# @app.route('/one-card/<card_url>')
-# def specific_card(card_url):
-# 	my_deck = cards.get_deck()
-# 	my_card = list(filter(lambda my_card: my_card['url'] == card_url, my_deck))[0]
-# 	if my_card['sequence'] > 1 :
-# 		previous_card_url = '/one-card/' + list(filter(lambda previous_card: previous_card['sequence'] == (my_card['sequence'] -1), my_deck))[0]['url']
-# 	else :
-# 		previous_card_url = '/studia-i-tarocchi'
-# 	if my_card['sequence'] < 78 :
-# 		next_card_url = '/one-card/' + list(filter(lambda next_card: next_card['sequence'] == (my_card['sequence'] +1), my_deck))[0]['url']
-# 	else :
-# 		next_card_url = '/studia-i-tarocchi'
-# 	if my_card['cardtype'] == "major" :
-# 		return render_template("tarocchi/specific_card.html",
-# 								name = my_card['name'],
-# 								title = my_card['name'],
-# 								meaning = my_card['desc'],
-# 								message = my_card['message'],
-# 								reversed_meaning = my_card['rdesc'],
-# 								golden_dawn = my_card['golden_dawn'],
-# 								image = my_card['image'],
-# 							    previous = previous_card_url,
-# 							    next = next_card_url,
-# 							    sequence = my_card['sequence'],
-# 							    cardtype = my_card['cardtype'])
-# 	else: 
-# 		return render_template("tarocchi/specific_card.html",
-# 								name = my_card['name'],
-# 								title = my_card['name'],
-# 								meaning = my_card['desc'],
-# 								reversed_meaning = my_card['rdesc'],
-# 								golden_dawn = my_card['golden_dawn'],
-# 								image = my_card['image'],
-# 							    previous = previous_card_url,
-# 							    next = next_card_url,
-# 							    sequence = my_card['sequence'],
-# 							    cardtype = my_card['cardtype'])
-
-# Improved get specific route 
+# Get specific card 
 @app.route('/one-card/<card_url>')
 def specific_card(card_url):
     my_deck = cards.get_deck()
@@ -187,8 +145,7 @@ LOVE_QUESTIONS = [
 @app.route('/tarocchi-amore', strict_slashes=False)
 def love_tarot():
     return render_template('tarocchi/love_tarot.html', 
-                         questions=LOVE_QUESTIONS,
-                         title="Tarocchi dell'Amore")
+                         questions=LOVE_QUESTIONS)
 
 @app.route('/tarocchi-amore/<question_id>', strict_slashes=False)
 def love_reading(question_id):
@@ -207,8 +164,7 @@ def love_reading(question_id):
 # Tarocchi Si o No
 @app.route('/tarocchi-si-no', strict_slashes=False)
 def yesno_tarot():
-    return render_template('tarocchi/yesno_tarot.html', 
-                         title="Tarocchi Si o No")
+    return render_template('tarocchi/yesno_tarot.html')
 
 @app.route('/tarocchi-si-no/risposta', strict_slashes=False)
 def yesno_reading():
@@ -219,8 +175,7 @@ def yesno_reading():
     return render_template('tarocchi/yesno_card.html',
                          card=drawn_card[0],
                          reversed=drawn_card[1],
-                         response=response,
-                         title="Il Responso dei Tarocchi")
+                         response=response)
     
 # Bologna Magica routes
 @app.route('/bologna-magica')

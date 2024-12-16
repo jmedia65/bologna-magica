@@ -108,3 +108,11 @@
 .bi-star-fill::before {
   content: "\f586";
 }
+
+.bi-arrow-right-short::before {
+  content: "\f135";
+}
+
+.bi-arrow-left-short::before {
+  content: "\f12c";
+}

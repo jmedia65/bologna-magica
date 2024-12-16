@@ -1,4 +1,15 @@
 {% extends "base.html" %}
+
+{# SEO Meta #}
+{% block title %}Tarocchi 3 Carte Gratis | Lettura Tarocchi Tre Carte{% endblock %}
+{% block meta_description %}Consulta gratuitamente i tarocchi con la lettura delle 3 carte: passato, presente e futuro. Una lettura completa per illuminare il tuo cammino personale.{% endblock %}
+
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block og_image %}/static/images/og-image-tarocchi.jpg{% endblock %}
+{% block twitter_image_alt %}Lettura Tarocchi Tre Carte: Passato, Presente, Futuro{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="row justify-content-center">
@@ -43,6 +54,60 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- SEO Content Section -->
+    <div class="row mt-5">
+        <div class="col-lg-8 mx-auto">
+            <article class="content-article">
+                <h2 class="h3 text-primary mb-4">La Lettura dei Tarocchi a Tre Carte: Un Viaggio nel Tempo</h2>
+
+                <p class="lead mb-4">La lettura dei 3 tarocchi è uno dei metodi più antichi e rivelatori della tradizione cartomantica. Attraverso tre arcani, questa consultazione gratuita offre una visione completa del tuo percorso personale.</p>
+
+                <section class="mb-4">
+                    <h3 class="h4">Il Significato delle Tre Carte</h3>
+                    <p>La disposizione a 3 carte dei tarocchi segue un percorso temporale che illumina il cammino personale attraverso tre momenti fondamentali:</p>
+                    <div class="card bg-light mb-3">
+                        <div class="card-body">
+                            <ul class="mb-0">
+                                <li><strong>Prima Carta - Il Passato:</strong> Rivela le influenze che hanno plasmato la situazione attuale</li>
+                                <li><strong>Seconda Carta - Il Presente:</strong> Mostra le energie e le sfide del momento</li>
+                                <li><strong>Terza Carta - Il Futuro:</strong> Indica le potenziali direzioni e sviluppi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-4">
+                    <h3 class="h4">Perché Scegliere la Lettura a Tre Carte</h3>
+                    <p>La lettura dei tarocchi con 3 carte offre numerosi vantaggi:</p>
+                    <ul>
+                        <li>Visione completa della situazione nel tempo</li>
+                        <li>Interpretazione chiara e strutturata</li>
+                        <li>Comprensione delle dinamiche passato-presente-futuro</li>
+                        <li>Guida pratica per le decisioni future</li>
+                    </ul>
+                </section>
+
+                <section class="mb-4">
+                    <h3 class="h4">La Tradizione dei Tarocchi a Bologna</h3>
+                    <p>La lettura delle tre carte è una delle tecniche più apprezzate nella tradizione cartomantica bolognese. Questo metodo, tramandato nei secoli sotto le Due Torri, combina la precisione dell'interpretazione con la profondità della tradizione esoterica italiana.</p>
+                </section>
+
+                <div class="card border-primary mb-4">
+                    <div class="card-body">
+                        <h3 class="h4">Come Prepararsi alla Lettura</h3>
+                        <ol class="mb-0">
+                            <li>Trova un momento di tranquillità</li>
+                            <li>Formula chiaramente la tua domanda</li>
+                            <li>Concentrati sulle tre dimensioni temporali</li>
+                            <li>Accogli il messaggio delle carte con mente aperta</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <p class="text-muted"><small>La consultazione dei tarocchi con lettura delle 3 carte è completamente gratuita e pensata per offrire una guida completa nel tuo percorso personale.</small></p>
+            </article>
         </div>
     </div>
 </div>

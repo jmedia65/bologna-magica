@@ -15,21 +15,33 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preload" href="/static/icons/fonts/bootstrap-icons.woff2" as="font" type="font/woff2" crossorigin>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Scopri i misteri di Bologna e consulta i Tarocchi. Un viaggio tra storia esoterica, cartomanzia e luoghi magici della città delle torri.">
-    
+    <!-- Dynamic Title -->
+    <title>{% block title %}Bologna Magica - Tarocchi e Misteri della Città delle Torri{% endblock %}</title>
+
+    <!-- Dynamic Meta Description -->
+    <meta name="description" content="{% block meta_description %}Scopri i misteri di Bologna e consulta i Tarocchi. Un viaggio tra storia esoterica, cartomanzia e luoghi magici della città delle torri.{% endblock %}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{% block canonical %}https://bolognamagica.com{{ request.path }}{% endblock %}" />
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="{% if title %}{{ title }} | Bologna Magica{% else %}Bologna Magica - Tarocchi e Misteri della Città delle Torri{% endif %}">
-    <meta property="og:description" content="Scopri i misteri di Bologna e consulta i Tarocchi. Un viaggio tra storia esoterica, cartomanzia e luoghi magici della città delle torri.">
-    <!-- <meta property="og:image" content="/static/images/og-image.jpg"> -->
+    <meta property="og:title" content="{% block og_title %}Bologna Magica - Tarocchi e Misteri della Città delle Torri{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Scopri i misteri di Bologna e consulta i Tarocchi. Un viaggio tra storia esoterica, cartomanzia e luoghi magici della città delle torri.{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}/static/images/og-image-bologna.jpg{% endblock %}">
     <meta property="og:url" content="https://bolognamagica.com{{ request.path }}">
-    
-    <!-- Page title -->
-    {% if title %}
-    <title>{{ title }} | Bologna Magica</title>
-    {% else %}
-    <title>Bologna Magica - Tarocchi e Misteri della Città delle Torri</title>
-    {% endif %}
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Bologna Magica">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:domain" content="bolognamagica.com">
+    <meta name="twitter:card" content="{% block twitter_card %}summary_large_image{% endblock %}">
+    <meta name="twitter:site" content="@bolognamagica">
+    <meta name="twitter:creator" content="@bolognamagica">
+    <meta name="twitter:title" content="{% block twitter_title %}{{ self.og_title() }}{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}{{ self.og_description() }}{% endblock %}">
+    <meta name="twitter:image" content="{% block twitter_image %}{{ self.og_image() }}{% endblock %}">
+    <meta name="twitter:image:alt" content="{% block twitter_image_alt %}Bologna Magica - Tarocchi e Misteri{% endblock %}">
 
     <!-- Critical CSS -->
     <link rel="stylesheet" href="/static/css/purged-bootstrap.min.css">

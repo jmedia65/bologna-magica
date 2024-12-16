@@ -1,4 +1,18 @@
 {% extends "base.html" %}
+
+{# SEO Meta #}
+{% block title %}Lettura Tarocchi: Passato, Presente e Futuro | Bologna Magica{% endblock %}
+{% block meta_description %}Scopri il messaggio delle tre carte dei tarocchi per il tuo cammino. Una lettura completa che illumina passato, presente e futuro.{% endblock %}
+
+{# Canonical - Point to main three cards page #}
+{% block canonical %}https://bolognamagica.com/three-cards-tarot{% endblock %}
+
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block og_image %}/static/images/og-image-tarocchi.jpg{% endblock %}
+{% block twitter_image_alt %}Lettura Completa dei Tarocchi{% endblock %}
+
 {% block content %}
 <div class="container">
     <h1 class="text-center mb-4">Il Tuo Cammino nei Tarocchi</h1>

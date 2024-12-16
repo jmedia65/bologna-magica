@@ -1,5 +1,15 @@
 {% extends "base.html" %}
 
+{# SEO Meta #}
+{% block title %}I Migliori Libri sui Tarocchi | Bibliografia Essenziale | Bologna Magica{% endblock %}
+{% block meta_description %}Una selezione accurata dei migliori libri sui tarocchi: dalla tradizione italiana, alla scuola marsigliese, fino agli studi inglesi.{% endblock %}
+
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block og_image %}/static/images/og-image-tarocchi.jpg{% endblock %}
+{% block twitter_image_alt %}Bibliografia Essenziale dei Tarocchi{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="row">

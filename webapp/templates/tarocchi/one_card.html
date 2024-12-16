@@ -1,4 +1,18 @@
 {% extends "base.html" %}
+
+{# SEO Meta #}
+{% block title %}Lettura Tarocchi | Il Significato della Tua Carta | Bologna Magica{% endblock %}
+{% block meta_description %}Scopri il significato della carta {{ name }} e il messaggio che i tarocchi hanno in serbo per te.{% endblock %}
+
+{# Canonical - Point to main online tarot page #}
+{% block canonical %}https://bolognamagica.com/one-card-tarot{% endblock %}
+
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block og_image %}/static/images/og-image-tarocchi.jpg{% endblock %}
+{% block twitter_image_alt %}Carta dei Tarocchi: {{ name }}{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="row justify-content-center">

@@ -1,4 +1,15 @@
 {% extends "base.html" %}
+
+{# SEO Meta #}
+{% block title %}Tarocchi dell'Amore Gratis | Lettura Online{% endblock %}
+{% block meta_description %}Ricevi una lettura gratuita dei Tarocchi dell'Amore. Scopri il futuro del tuo rapporto, i sentimenti del partner e le risposte alle tue domande sul cuore.{% endblock %}
+
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block og_image %}/static/images/og-image-tarocchi.jpg{% endblock %}
+{% block twitter_image_alt %}Lettura dei Tarocchi dell'Amore - Consulto Gratuito{% endblock %}
+
 {% block content %}
 <div class="container">
     <h1 class="text-center mb-4">Tarocchi dell'Amore</h1>
@@ -17,6 +28,53 @@
                 </div>
             </div>
             {% endfor %}
+        </div>
+    </div>
+
+    <!-- SEO Content Section -->
+    <div class="row mt-5">
+        <div class="col-lg-8 mx-auto">
+            <article class="content-article">
+                <h2 class="h3 text-primary mb-4">I Tarocchi dell'Amore: Una Guida alle Risposte del Cuore</h2>
+                
+                <p class="lead mb-4">I tarocchi dell'amore rappresentano uno strumento millenario per esplorare le questioni del cuore, offrendo intuizioni preziose sulle relazioni e i sentimenti.</p>
+
+                <section class="mb-4">
+                    <h3 class="h4">Come Funziona la Lettura dei Tarocchi dell'Amore</h3>
+                    <p>Ogni carta dei tarocchi contiene simboli e significati profondi che possono illuminare diversi aspetti della vita amorosa. La tradizione cartomantica bolognese, in particolare, offre una prospettiva unica sulle questioni del cuore, combinando la saggezza antica con una comprensione moderna delle relazioni.</p>
+                </section>
+
+                <section class="mb-4">
+                    <h3 class="h4">Quando Consultare i Tarocchi dell'Amore</h3>
+                    <p>I tarocchi possono essere particolarmente utili nei momenti di:</p>
+                    <ul>
+                        <li>Incertezza sulla direzione di una relazione</li>
+                        <li>Dubbi sui sentimenti del partner</li>
+                        <li>Decisioni importanti riguardanti l'amore</li>
+                        <li>Desiderio di comprendere meglio le dinamiche di coppia</li>
+                        <li>Riflessione su nuovi incontri e possibilità</li>
+                    </ul>
+                </section>
+
+                <section class="mb-4">
+                    <h3 class="h4">L'Importanza della Tradizione Bolognese</h3>
+                    <p>Bologna, città che ha dato i natali ai tarocchi italiani, mantiene viva una tradizione cartomantica unica. I tarocchi bolognesi si distinguono per la loro capacità di offrire risposte chiare e profonde, specialmente nelle questioni d'amore, grazie a secoli di saggezza accumulata tra i portici della città delle torri.</p>
+                </section>
+
+                <div class="card bg-light mb-4">
+                    <div class="card-body">
+                        <h3 class="h4">Come Ottenere il Massimo dalla Tua Lettura</h3>
+                        <ol class="mb-0">
+                            <li>Rifletti attentamente sulla tua domanda prima di selezionarla</li>
+                            <li>Mantieni una mente aperta alle risposte che riceverai</li>
+                            <li>Prendi appunti sui significati che più ti colpiscono</li>
+                            <li>Usa le intuizioni ricevute come spunto di riflessione</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <p class="text-muted mt-4"><small>La lettura dei tarocchi dell'amore è gratuita e pensata per offrire spunti di riflessione e guidare verso una maggiore comprensione delle dinamiche affettive.</small></p>
+            </article>
         </div>
     </div>
 </div>

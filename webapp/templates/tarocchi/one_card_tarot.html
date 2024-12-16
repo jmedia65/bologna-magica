@@ -1,4 +1,15 @@
 {% extends "base.html" %}
+
+{# SEO Meta #}
+{% block title %}Tarocchi Online Gratis | Consulto Immediato{% endblock %}
+{% block meta_description %}Consulta i tarocchi online gratuitamente ed ottieni un responso immediato. Una lettura personalizzata per guidare le tue scelte.{% endblock %}
+
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block og_image %}/static/images/og-image-tarocchi.jpg{% endblock %}
+{% block twitter_image_alt %}Consulto Tarocchi Online Gratuito{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="row justify-content-center">
@@ -25,6 +36,65 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg-8 mx-auto">
+            <article class="content-article">
+                <h2 class="h3 text-primary mb-4">Consulta i Tarocchi Online: Una Guida per il Tuo Cammino</h2>
+                
+                <p class="lead mb-4">La consultazione online dei tarocchi offre un modo immediato e accessibile per ricevere guida e intuizioni attraverso l'antica saggezza delle carte.</p>
+
+                <section class="mb-4">
+                    <h3 class="h4">Scegli la Lettura più Adatta a Te</h3>
+                    <div class="card bg-light mb-3">
+                        <div class="card-body">
+                            <p>Offriamo diverse modalità di consultazione gratuita dei tarocchi:</p>
+                            <ul class="mb-0">
+                                <li><strong><a href="{{ url_for('love_tarot') }}" class="text-decoration-none">Tarocchi dell'Amore</a>:</strong> Per domande sul cuore e le relazioni</li>
+                                <li><strong><a href="{{ url_for('yesno_tarot') }}" class="text-decoration-none">Tarocchi Si o No</a>:</strong> Per risposte immediate e dirette</li>
+                                <li><strong><a href="{{ url_for('three_cards_tarot') }}" class="text-decoration-none">Lettura Tre Carte</a>:</strong> Per esplorare passato, presente e futuro</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-4">
+                    <h3 class="h4">Il Significato della Carta Singola</h3>
+                    <p>Una singola carta dei tarocchi può rivelare messaggi profondi e significativi. Ogni arcano contiene molteplici livelli di interpretazione che possono illuminare:</p>
+                    <ul>
+                        <li>La situazione attuale e le sue dinamiche</li>
+                        <li>Le energie dominanti del momento</li>
+                        <li>I potenziali sviluppi futuri</li>
+                        <li>I consigli pratici per procedere</li>
+                    </ul>
+                </section>
+
+                <section class="mb-4">
+                    <h3 class="h4">La Tradizione dei Tarocchi Online</h3>
+                    <p>La consultazione online dei tarocchi mantiene intatta l'antica saggezza della tradizione cartomantica bolognese, rendendo accessibile a tutti questa forma millenaria di guida e consiglio. Attraverso la tecnologia, portiamo la magia dei tarocchi direttamente a casa tua, preservando l'autenticità della lettura tradizionale.</p>
+                </section>
+
+                <div class="card border-primary mb-4">
+                    <div class="card-body">
+                        <h3 class="h4">Come Ottenere una Lettura Efficace</h3>
+                        <ol class="mb-0">
+                            <li>Scegli un momento tranquillo per la consultazione</li>
+                            <li>Formula chiaramente la tua domanda o intenzione</li>
+                            <li>Mantieni un atteggiamento aperto e ricettivo</li>
+                            <li>Rifletti sul significato personale del messaggio</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="alert alert-info" role="alert">
+                    <h4 class="h5">Hai bisogno di una lettura più approfondita?</h4>
+                    <p class="mb-0">Prova la nostra <a href="{{ url_for('three_cards_tarot') }}" class="alert-link">lettura completa con tre carte</a> per una visione più ampia della tua situazione.</p>
+                </div>
+
+                <p class="text-muted"><small>La consultazione dei tarocchi online è gratuita e pensata per offrire guida e riflessione nel rispetto della tradizione cartomantica bolognese.</small></p>
+            </article>
         </div>
     </div>
 </div>

@@ -1,4 +1,15 @@
 {% extends "base.html" %}
+
+{# SEO Meta #}
+{% block title %}Tarocchi Si o No Gratis | Consulto Online Immediato{% endblock %}
+{% block meta_description %}Consulta gratuitamente i Tarocchi Si o No per ricevere risposte chiare e immediate alle tue domande con l'oracolo diretto.{% endblock %}
+
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block og_image %}/static/images/og-image-tarocchi.jpg{% endblock %}
+{% block twitter_image_alt %}Oracolo Tarocchi Si o No - Responso Immediato{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="row justify-content-center">
@@ -24,6 +35,62 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- SEO Content Section -->
+    <div class="row mt-5">
+        <div class="col-lg-8 mx-auto">
+            <article class="content-article">
+                <h2 class="h3 text-primary mb-4">Tarocchi Si o No: L'Oracolo delle Risposte Immediate</h2>
+
+                <p class="lead mb-4">L'antica tradizione dei tarocchi offre un metodo rapido ed efficace per ottenere risposte chiare alle domande che ci turbano, attraverso un consulto gratuito e immediato.</p>
+
+                <section class="mb-4">
+                    <h3 class="h4">Come Funziona la Lettura dei Tarocchi Si o No</h3>
+                    <p>Questa forma di divinazione, basata sulla tradizione cartomantica bolognese, utilizza l'energia e il simbolismo dei tarocchi per fornire risposte dirette alle tue domande. Ogni carta estratta viene interpretata secondo principi antichi per determinare un "Sì" o un "No" chiaro e inequivocabile.</p>
+                </section>
+
+                <section class="mb-4">
+                    <h3 class="h4">Come Formulare la Domanda Giusta</h3>
+                    <div class="card bg-light mb-3">
+                        <div class="card-body">
+                            <p class="mb-3">Per ottenere il massimo da questa lettura, segui questi consigli:</p>
+                            <ul class="mb-0">
+                                <li>Formula domande chiare e specifiche</li>
+                                <li>Evita domande multiple o troppo complesse</li>
+                                <li>Concentrati su un aspetto alla volta</li>
+                                <li>Mantieni la mente aperta al responso</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-4">
+                    <h3 class="h4">Quando Consultare i Tarocchi Si o No</h3>
+                    <p>Questo metodo è particolarmente efficace per:</p>
+                    <ul>
+                        <li>Decisioni immediate che richiedono chiarezza</li>
+                        <li>Conferme su intuizioni personali</li>
+                        <li>Dubbi su situazioni specifiche</li>
+                        <li>Scelte tra due alternative definite</li>
+                    </ul>
+                </section>
+
+                <section class="mb-4">
+                    <h3 class="h4">La Tradizione dei Tarocchi a Bologna</h3>
+                    <p>I tarocchi bolognesi, con la loro ricca storia che affonda le radici nel Rinascimento italiano, offrono una prospettiva unica nella cartomanzia. La lettura Si o No rappresenta una delle tecniche più antiche e affidabili, tramandata attraverso i secoli nei portici della città delle torri.</p>
+                </section>
+
+                <div class="card border-primary mb-4">
+                    <div class="card-body">
+                        <h3 class="h4 text-primary">Interpretazione del Responso</h3>
+                        <p class="mb-0">Oltre alla risposta Si o No, ogni carta fornisce ulteriori sfumature e dettagli sulla situazione, arricchendo la comprensione del responso con la saggezza simbolica dei tarocchi.</p>
+                    </div>
+                </div>
+
+                <p class="text-muted"><small>La consultazione dei tarocchi Si o No è completamente gratuita e pensata per offrire guida e chiarezza nei momenti di dubbio.</small></p>
+            </article>
         </div>
     </div>
 </div>
