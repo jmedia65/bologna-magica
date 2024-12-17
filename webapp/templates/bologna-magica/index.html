@@ -1,8 +1,15 @@
-{# bologna-magica/index.html #}
 {% extends "bologna-magica/_content_base.html" %}
 
-{% block page_title %}Bologna Magica: Un Viaggio nei Misteri della Città delle Torri{% endblock %}
+{# SEO Meta #}
+{% block title %}Bologna Magica: Misteri, Leggende e Storia Esoterica della Città{% endblock %}
+{% block meta_description %}Scopri i luoghi misteriosi di Bologna: dalle streghe agli alchimisti, un viaggio attraverso i segreti nascosti tra torri e portici secolari.{% endblock %}
 
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block twitter_image_alt %}Bologna Magica: La Città dei Misteri{% endblock %}
+
+{% block page_title %}Bologna Magica: Un Viaggio nei Misteri della Città delle Torri{% endblock %}
 {% block page_subtitle %}Dove Storia, Magia e Mistero si Incontrano nei Portici Secolari{% endblock %}
 
 {% block page_content %}

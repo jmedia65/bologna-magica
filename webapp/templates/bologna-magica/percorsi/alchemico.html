@@ -1,12 +1,19 @@
-{# bologna-magica/percorsi/alchemico.html #}
 {% extends "bologna-magica/_content_base.html" %}
 
 {% set breadcrumb = true %}
 {% set section_name = "Percorso Alchemico" %}
 {% set show_cta = true %}
 
-{% block page_title %}L'Alchimia a Bologna: Tra Scienza e Magia{% endblock %}
+{# SEO Meta #}
+{% block title %}Alchimia a Bologna: Itinerario tra Scienza e Magia{% endblock %}
+{% block meta_description %}Scopri i luoghi dell'alchimia a Bologna: un itinerario attraverso i siti dove gli alchimisti bolognesi unirono scienza e magia.{% endblock %}
 
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block twitter_image_alt %}Luoghi dell'Alchimia a Bologna: Un Itinerario Storico{% endblock %}
+
+{% block page_title %}L'Alchimia a Bologna: Tra Scienza e Magia{% endblock %}
 {% block page_subtitle %}Un viaggio nei luoghi dove la ricerca della pietra filosofale si intrecciava con la nascita della scienza moderna{% endblock %}
 
 {% block page_content %}

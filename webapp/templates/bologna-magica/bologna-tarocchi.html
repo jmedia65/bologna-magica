@@ -1,12 +1,19 @@
-{# bologna-magica/bologna-tarocchi.html #}
 {% extends "bologna-magica/_content_base.html" %}
 
 {% set breadcrumb = true %}
 {% set section_name = "Bologna e i Tarocchi" %}
 {% set show_cta = true %}
 
-{% block page_title %}Bologna e i Tarocchi: Una Storia d'Amore Secolare{% endblock %}
+{# SEO Meta #}
+{% block title %}Storia dei Tarocchi a Bologna | Origine e Tradizione Bolognese{% endblock %}
+{% block meta_description %}Scopri la storia secolare dei tarocchi a Bologna: un viaggio attraverso i luoghi e le origini della tradizione cartomantica bolognese.{% endblock %}
 
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block twitter_image_alt %}Storia dei Tarocchi di Bologna: Luoghi e Origini{% endblock %}
+
+{% block page_title %}Bologna e i Tarocchi: Una Storia d'Amore Secolare{% endblock %}
 {% block page_subtitle %}Dalle corti rinascimentali al mondo digitale: come Bologna ha dato vita e forma ai Tarocchi{% endblock %}
 
 {% block page_content %}

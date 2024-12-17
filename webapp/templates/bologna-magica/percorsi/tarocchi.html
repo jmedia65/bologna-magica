@@ -1,12 +1,19 @@
-{# bologna-magica/percorsi/tarocchi.html #}
 {% extends "bologna-magica/_content_base.html" %}
 
 {% set breadcrumb = true %}
 {% set section_name = "Percorso dei Tarocchi" %}
 {% set show_cta = true %}
 
-{% block page_title %}I Tarocchi di Bologna: Un Cammino tra Storia e Divinazione{% endblock %}
+{# SEO Meta #}
+{% block title %}I Luoghi dei Tarocchi a Bologna: Tour Storico | Itinerario Guidato{% endblock %}
+{% block meta_description %}Visita i luoghi storici dei tarocchi a Bologna: un tour attraverso i siti dove nacque la tradizione cartomantica bolognese.{% endblock %}
 
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block twitter_image_alt %}Tour dei Luoghi Storici dei Tarocchi a Bologna{% endblock %}
+
+{% block page_title %}I Tarocchi di Bologna: Un Cammino tra Storia e Divinazione{% endblock %}
 {% block page_subtitle %}Dal XV secolo ad oggi, Bologna custodisce una delle tradizioni cartomantiche più antiche d'Italia{% endblock %}
 
 {% block page_content %}

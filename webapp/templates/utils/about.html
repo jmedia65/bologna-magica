@@ -1,5 +1,14 @@
 {% extends "base.html" %}
 
+{# SEO Meta #}
+{% block title %}Chi Siamo | Il Progetto Bologna Magica | BolognaMagica.com{% endblock %}
+{% block meta_description %}Scopri il progetto Bologna Magica: la nostra missione di preservare e condividere il patrimonio culturale ed esoterico bolognese.{% endblock %}
+
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block twitter_image_alt %}Il Team di Bologna Magica{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="row">

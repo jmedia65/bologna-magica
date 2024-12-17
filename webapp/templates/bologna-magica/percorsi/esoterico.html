@@ -1,12 +1,19 @@
-{# bologna-magica/percorsi/esoterico.html #}
 {% extends "bologna-magica/_content_base.html" %}
 
 {% set breadcrumb = true %}
 {% set section_name = "Percorso Esoterico" %}
 {% set show_cta = true %}
 
-{% block page_title %}Bologna Esoterica: Un Percorso tra Simboli e Segreti{% endblock %}
+{# SEO Meta #}
+{% block title %}Bologna Esoterica: Itinerario dei Luoghi Misteriosi | Tour Guidato{% endblock %}
+{% block meta_description %}Visita i luoghi esoterici di Bologna: dalle Due Torri al Santo Stefano, un percorso attraverso antiche leggende della città.{% endblock %}
 
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block twitter_image_alt %}Tour dei Luoghi Esoterici di Bologna{% endblock %}
+
+{% block page_title %}Bologna Esoterica: Un Percorso tra Simboli e Segreti{% endblock %}
 {% block page_subtitle %}Dietro i portici si nasconde una geografia sacra, un reticolo di luoghi carichi di significati misteriosi{% endblock %}
 
 {% block page_content %}

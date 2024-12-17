@@ -1,12 +1,19 @@
-{# bologna-magica/storia-misteri.html #}
 {% extends "bologna-magica/_content_base.html" %}
 
 {% set breadcrumb = true %}
 {% set section_name = "Storia & Misteri" %}
 {% set show_cta = true %}
 
-{% block page_title %}I Segreti di Bologna: Storie di Magia, Scienza e Mistero{% endblock %}
+{# SEO Meta #}
+{% block title %}Bologna Segreta: Storie, Leggende e Misteri della Città{% endblock %}
+{% block meta_description %}Scopri i misteri e le leggende di Bologna: dalle streghe agli alchimisti, Un viaggio nella Bologna segreta, tra storia esoterica e luoghi misteriosi.{% endblock %}
 
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block twitter_image_alt %}Bologna Segreta e Misteriosa: Luoghi ed Enigmi{% endblock %}
+
+{% block page_title %}I Segreti di Bologna: Storie di Magia, Scienza e Mistero{% endblock %}
 {% block page_subtitle %}Un viaggio attraverso i secoli alla scoperta del lato più misterioso della città delle torri{% endblock %}
 
 {% block page_content %}
