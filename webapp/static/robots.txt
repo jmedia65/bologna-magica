@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /data/
+Disallow: /static/css/
+Disallow: /static/js/
+Disallow: /static/icons/
+
+Sitemap: https://bolognamagica.com/sitemap.xml

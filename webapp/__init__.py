@@ -1,8 +1,10 @@
-# create a Flask object
 from flask import Flask
-app = Flask(__name__)
+from flask_sitemapper import Sitemapper
 
-# and import the routes
-# (routes is a file in the webapp directory)
+app = Flask(__name__)
+sitemapper = Sitemapper()
+sitemapper.init_app(app)
+# app.config['SERVER_NAME'] = 'bolognamagica.com'
+
 from webapp import routes
-# this import comes at the end because routes needs to know abut the app object's methods
+
