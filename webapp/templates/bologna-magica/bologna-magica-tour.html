@@ -1,0 +1,482 @@
+{% extends "bologna-magica/_content_base.html" %}
+
+{% block html_lang %}it{% endblock %}
+
+{% set breadcrumb = true %}
+{% set section_name = "Il Tour Bologna Magica" %}
+{% set show_cta = true %}
+
+{# SEO Meta #}
+{% block title %}Il Tour Bologna Magica: Un Viaggio nei Misteri della Città{% endblock %}
+{% block meta_description %}Scopri l'antico tour Bologna Magica: un percorso attraverso i luoghi più misteriosi e affascinanti della città delle torri.{% endblock %}
+
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block twitter_image_alt %}Tour dei Luoghi Misteriosi di Bologna{% endblock %}
+
+{% block page_title %}Il Tour Bologna Magica: Un Viaggio nei Misteri della Città{% endblock %}
+{% block page_subtitle %}Un percorso storico attraverso i luoghi più enigmatici e misteriosi di Bologna{% endblock %}
+
+{% block language_alternates %}
+<link rel="alternate" hreflang="it" href="https://bolognamagica.com/bologna-magica/bologna-magica-tour" />
+<link rel="alternate" hreflang="en" href="https://bolognamagica.com/bologna-magica/bologna-magica-tour-en" />
+{% endblock %}
+
+{% block page_content %}
+<div class="row">
+  <div class="col-lg-8">
+    <!-- Introduction -->
+    <section class="mb-5">
+      <p class="lead">
+        Per quasi trent'anni, dal 1992 al 2020, il tour "Bologna Magica" ha
+        guidato visitatori e bolognesi alla scoperta dei segreti nascosti della
+        città. Un percorso unico che svelava le storie di streghe e alchimisti,
+        astrologi ed eretici, attraverso undici tappe fondamentali nel cuore di
+        Bologna. Oggi, preserviamo la memoria di questo straordinario
+        itinerario, permettendo a chiunque di esplorare il lato più misterioso
+        della città delle torri. [<a href="/bologna-magica/bologna-magica-tour-en" class="text-muted" hreflang="en">Read in English</a>]
+      </p>
+    </section>
+
+    <!-- Main Content -->
+    <section class="mb-5">
+      <h2 class="h3 mb-4">Le Tappe del Tour</h2>
+
+      <!-- Location 1 -->
+      <div class="location-card mb-4">
+        <h3 class="h4 text-primary">1. Basilica di San Petronio</h3>
+        <div class="card">
+          <div class="card-body">
+            <p>
+              Tra gli archi e le navate della più grande basilica bolognese si
+              cela un intricato universo di simboli esoterici. Forse non tutti
+              sanno che l'intera struttura fu concepita come un colossale
+              strumento astronomico, dove architettura e astrologia si fondono
+              in un'armonia perfetta:
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-compass"></i> La meridiana zodiacale sul
+                pavimento, che rivoluzionò il calendario
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-triangle"></i> La facciata con il suo complesso
+                simbolismo: il triangolo dell'elevazione, il quadrato della
+                stabilità e l'esagono dell'uomo
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-circle"></i> I dodici punti astronomici che
+                determinano le proporzioni dell'edificio
+              </li>
+            </ul>
+            <p class="fst-italic">
+              "Ogni pietra della basilica nasconde un significato più profondo,
+              un messaggio cifrato lasciato dai Maestri Muratori medievali."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location 2 -->
+      <div class="location-card mb-4">
+        <h3 class="h4 text-primary">2. Fontana del Nettuno</h3>
+        <div class="card">
+          <div class="card-body">
+            <p>
+              Nel cuore di Bologna, il possente Nettuno veglia sulla città dal
+              1566, testimone silenzioso della lotta tra ortodossia ed eresia
+              durante il Concilio di Trento. Ma le storie più affascinanti si
+              nascondono negli edifici che lo circondano:
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-globe"></i> Il Nettuno, divinità pagana il cui
+                tridente simbolicamente schiaccia l'eresia
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-building"></i> Il vicino Palazzo Re Enzo, dove
+                il mago Michele Scoto organizzava misteriosi banchetti
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-star"></i> Le vestigia dell'antico Orto
+                Botanico, luogo di studio delle erbe magiche
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location 3 -->
+      <div class="location-card mb-4">
+        <h3 class="h4 text-primary">3. Piazza Galvani e l'Archiginnasio</h3>
+        <div class="card">
+          <div class="card-body">
+            <p>
+              Nell'antica sede dell'università più antica del mondo, gli
+              esperimenti scientifici si mescolavano con pratiche alchemiche e
+              la medicina dialogava con l'astrologia. Un luogo dove la ricerca
+              della conoscenza superava ogni confine tra scienza e mistero:
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-flask"></i> La statua di Luigi Galvani, i cui
+                esperimenti ispirarono "Frankenstein"
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-stars"></i> Il Teatro Anatomico con il suo
+                misterioso ciclo astrologico
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-gem"></i> Il luogo dove si produceva la
+                "teriaca", l'antica panacea universale
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location 4 -->
+      <div class="location-card mb-4">
+        <h3 class="h4 text-primary">4. Via D'Azeglio</h3>
+        <div class="card">
+          <div class="card-body">
+            <p>
+              Le pietre di questa antica strada raccontano storie di muratoria
+              medievale e di misteriose figure femminili. Qui, tra portici
+              secolari, si intrecciano le vicende della prima massoneria
+              bolognese e di una delle streghe più celebri della città:
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-building"></i> La chiesa di San Procolo, sede
+                della prima Muratoria
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-star"></i> Il portico dei Bastardini con
+                l'enigmatico simbolo della Diavolessa
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-moon-stars"></i> Il luogo dove visse la strega
+                Caterina nel XV secolo
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location 5 -->
+      <div class="location-card mb-4">
+        <h3 class="h4 text-primary">5. Basilica di San Domenico</h3>
+        <div class="card">
+          <div class="card-body">
+            <p>
+              Le severe mura di questa basilica hanno custodito per secoli i
+              segreti dell'Inquisizione, ma anche misteri ben più antichi. In
+              questo luogo sacro, le storie dei Templari si intrecciano con
+              enigmi ancora irrisolti:
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-book"></i> Sede storica del Tribunale
+                dell'Inquisizione
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-shield"></i> Collegamenti con l'ordine dei
+                Templari e altri movimenti esoterici medievali
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-star"></i> Nelle vicinanze, l'enigma dell'Aelia
+                Lelia Crispis, la misteriosa pietra che ha confuso studiosi per
+                secoli
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location 6 -->
+      <div class="location-card mb-4">
+        <h3 class="h4 text-primary">6. Il Complesso Stefaniano</h3>
+        <div class="card">
+          <div class="card-body">
+            <p>
+              Dalle antiche radici pagane alla mistica cristiana, le Sette
+              Chiese custodiscono duemila anni di storia esoterica. Un vero e
+              proprio microcosmo sacro che riproduce la Gerusalemme celeste nel
+              cuore di Bologna:
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-moon-stars"></i> Antiche origini legate al culto
+                di Iside
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-building"></i> La riproduzione esatta del Santo
+                Sepolcro di Gerusalemme
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-star"></i> Il misterioso Catino del cortile di
+                Pilato, collegato alla leggenda del Santo Graal
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-grid"></i> Capitelli decorati con simboli
+                ermetici e alchemici
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location 7 -->
+      <div class="location-card mb-4">
+        <h3 class="h4 text-primary">7. Le Due Torri</h3>
+        <div class="card">
+          <div class="card-body">
+            <p>
+              Le sentinelle di pietra di Bologna non sono solo un simbolo
+              civico, ma il centro di un elaborato sistema astrologico che
+              abbraccia l'intera città. Secondo gli antichi testi del XVII
+              secolo, le torri fungevano da perno di una vera e propria mappa
+              celeste:
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-moon-stars"></i> La leggendaria costruzione
+                della Torre Asinelli in una sola notte
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-compass"></i> Le torri come centro di un sistema
+                zodiacale urbano
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-diagram-3"></i> Le dodici porte della città come
+                rappresentazione dei segni zodiacali
+              </li>
+            </ul>
+            <p class="fst-italic">
+              "Le Due Torri non sono solo il simbolo di Bologna, ma il centro di
+              una complessa geografia sacra che abbraccia l'intera città."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location 8 -->
+      <div class="location-card mb-4">
+        <h3 class="h4 text-primary">8. L'Ex Ghetto Ebraico</h3>
+        <div class="card">
+          <div class="card-body">
+            <p>
+              Nei vicoli stretti dell'antico ghetto, la sapienza cabalistica si
+              fondeva con la ricerca alchemica. Qui, tra case torri e sinagoghe
+              nascoste, gli studiosi cercavano di svelare i segreti della
+              materia e dello spirito:
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-stars"></i> Centro degli studi cabalistici e
+                alchemici della città
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-brightness-high"></i> Luogo della scoperta della
+                "pietra luciferina" di Casciarolo
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-building"></i> Palazzo Bocchi e l'accademia
+                Hermatena, punto d'incontro di eruditi ed esoteristi
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location 9 -->
+      <div class="location-card mb-4">
+        <h3 class="h4 text-primary">9. Via Galliera</h3>
+        <div class="card">
+          <div class="card-body">
+            <p>
+              In questa elegante strada si nasconde la culla dei tarocchi
+              bolognesi. Tra i suoi palazzi nobiliari si intrecciano storie di
+              arte divinatoria e persecuzioni, di famiglie potenti e antiche
+              tradizioni:
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-house"></i> Palazzo Felicini e la famiglia
+                Fibbia Castracani, legati alla nascita dei tarocchi
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-fire"></i> Il ricordo del "rogo del diavolo" del
+                1423 in Piazza Maggiore
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-star"></i> La prima rappresentazione dell'Appeso
+                nella Cappella Bolognini
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location 10 -->
+      <div class="location-card mb-4">
+        <h3 class="h4 text-primary">10. Via IV Novembre</h3>
+        <div class="card">
+          <div class="card-body">
+            <p>
+              Una strada apparentemente ordinaria che nasconde straordinari
+              collegamenti con il mondo dell'occulto. Dalla nascita di uno dei
+              più grandi inventori alle dimore di streghe e astrologi, ogni
+              pietra racconta una storia di magia e scienza:
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-star"></i> La casa natale di Guglielmo Marconi e
+                i suoi interessi spiritici
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-book"></i> La prima Cattedra di Astrologia della
+                facoltà di Medicina
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-moon-stars"></i> Il Torresotto Portanova, dimora
+                della leggendaria "strega enormissima" Gentile Cimieri
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location 11 -->
+      <div class="location-card mb-4">
+        <h3 class="h4 text-primary">11. Piazza San Francesco</h3>
+        <div class="card">
+          <div class="card-body">
+            <p>
+              Il viaggio si conclude in un luogo dove arte, musica e alchimia si
+              fondono in perfetta armonia. Le antiche tombe dei Glossatori,
+              custodi di saperi dimenticati, vegliano sulla piazza dove anche il
+              giovane Mozart lasciò la sua impronta misteriosa:
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-book"></i> Le tombe dei Glossatori con i loro
+                simboli ermetici
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-star"></i> Il ricordo dell'esame di Mozart
+                all'Accademia Filarmonica
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-building"></i> La basilica gotica e le sue
+                storie di alchimia conventuale
+              </li>
+            </ul>
+            <p class="fst-italic">
+              "Un luogo dove la musica, l'alchimia e il sapere si intrecciano,
+              concludendo il viaggio nei misteri di Bologna."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historical Context -->
+    <section class="bg-light p-4 rounded mb-5">
+      <h3 class="h4 mb-3">La Storia del Tour</h3>
+      <p>
+        Il tour "Bologna Magica" nacque nel 1992 dall'amore per una città che da
+        sempre evoca misteri e incanti. Per quasi tre decenni, ha guidato
+        curiosi e appassionati attraverso le strade di Bologna, svelando segreti
+        nascosti tra i portici e le torri medievali.
+      </p>
+      <p class="mb-0">
+        Ogni tappa del percorso è stata accuratamente selezionata per rivelare
+        un aspetto diverso della Bologna esoterica: dall'alchimia alla
+        stregoneria, dall'astrologia ai tarocchi, creando un mosaico
+        affascinante di storia e mistero.
+      </p>
+    </section>
+
+    <!-- Personal Note -->
+    <div class="card border-primary mb-5">
+      <div class="card-body">
+        <h3 class="h5 card-title">Un Patrimonio da Preservare</h3>
+        <p class="card-text">
+          "La riscoperta di questo storico tour è stata per me un'emozione
+          incredibile. Preservare la memoria di questi percorsi significa
+          mantenere viva una parte fondamentale dell'identità di Bologna, quella
+          più misteriosa e affascinante. Attraverso questo sito, vogliamo
+          permettere a tutti di esplorare questi luoghi carichi di storia e
+          mistero."
+        </p>
+        <footer class="blockquote-footer mt-2">Max</footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="col-lg-4">
+    <!-- Tour Info Box -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h3 class="h5 mb-0">Informazioni sul Tour</h3>
+      </div>
+      <div class="card-body">
+        <p>
+          Il percorso originale comprendeva 11 tappe nel centro storico di
+          Bologna. Ogni tappa rivela un aspetto diverso della città esoterica,
+          creando un percorso unico attraverso secoli di storia e mistero.
+        </p>
+        <p class="small text-muted mb-0">
+          Durata stimata del percorso a piedi: 2-3 ore
+        </p>
+      </div>
+    </div>
+
+    <!-- Did You Know Box -->
+    <div class="card mb-4">
+      <div class="card-header">
+        <h3 class="h5 mb-0">Lo Sapevi?</h3>
+      </div>
+      <div class="card-body">
+        <p>
+          Il tour "Bologna Magica" è stato attivo dal 1992 al 2020, guidando
+          migliaia di visitatori alla scoperta dei misteri della città. Fu
+          creato da appassionati ricercatori locali che dedicarono anni allo
+          studio del lato esoterico di Bologna.
+        </p>
+      </div>
+    </div>
+
+    <!-- Related Paths -->
+    <div class="card">
+      <div class="card-header">
+        <h3 class="h5 mb-0">Percorsi Correlati</h3>
+      </div>
+      <div class="list-group list-group-flush">
+        <a
+          href="/bologna-magica/percorsi/tarocchi"
+          class="list-group-item list-group-item-action"
+        >
+          Percorso dei Tarocchi
+        </a>
+        <a
+          href="/bologna-magica/percorsi/esoterico"
+          class="list-group-item list-group-item-action"
+        >
+          Percorso Esoterico
+        </a>
+        <a
+          href="/bologna-magica/percorsi/alchemico"
+          class="list-group-item list-group-item-action"
+        >
+          Percorso Alchemico
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

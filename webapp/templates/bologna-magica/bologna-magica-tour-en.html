@@ -1,0 +1,427 @@
+{% extends "bologna-magica/_content_base.html" %}
+
+{% block html_lang %}en{% endblock %}
+
+{% set breadcrumb = true %}
+{% set section_name = "The Bologna Magica Tour" %}
+{% set show_cta = true %}
+
+{# SEO Meta #}
+{% block title %}The Bologna Magica Tour: A Journey Through the City's Mysteries{% endblock %}
+{% block meta_description %}Discover the historic Bologna Magica Tour: a journey through the most mysterious and fascinating places of the city of towers.{% endblock %}
+
+{# Social Meta #}
+{% block og_title %}{{ self.title() }}{% endblock %}
+{% block og_description %}{{ self.meta_description() }}{% endblock %}
+{% block twitter_image_alt %}Tour of Bologna's Mysterious Places{% endblock %}
+
+{% block page_title %}The Bologna Magica Tour: A Journey Through the City's Mysteries{% endblock %}
+{% block page_subtitle %}A historic journey through Bologna's most enigmatic and mysterious places{% endblock %}
+
+{% block language_alternates %}
+<link rel="alternate" hreflang="en" href="https://bolognamagica.com/bologna-magica/bologna-magica-tour-en" />
+<link rel="alternate" hreflang="it" href="https://bolognamagica.com/bologna-magica/bologna-magica-tour" />
+{% endblock %}
+
+{% block page_content %}
+<div class="row">
+    <div class="col-lg-8">
+        <!-- Introduction -->
+        <section class="mb-5">
+            <p class="lead">
+                For almost thirty years, from 1992 to 2020, the "Bologna Magica Tour" guided visitors 
+                and locals alike through the hidden secrets of the city. A unique journey that 
+                revealed stories of witches and alchemists, astrologers and heretics, through 
+                eleven key stops in the heart of Bologna. Today, we preserve the memory of this 
+                extraordinary itinerary, allowing anyone to explore the most mysterious side of 
+                the city of towers. [<a href="/bologna-magica/bologna-magica-tour" class="text-muted" hreflang="it">Leggi in Italiano</a>]
+            </p>
+        </section>
+
+        <!-- Main Content -->
+        <section class="mb-5">
+            <h2 class="h3 mb-4">Tour Stops</h2>
+
+            <!-- Location 1 -->
+            <div class="location-card mb-4">
+                <h3 class="h4 text-primary">1. Basilica of San Petronio</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <p>Among the arches and naves of Bologna's largest basilica lies an intricate 
+                        universe of esoteric symbols. Few know that the entire structure was conceived 
+                        as a colossal astronomical instrument, where architecture and astrology merge 
+                        in perfect harmony:</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-compass"></i> The zodiacal meridian line on the floor, 
+                                which revolutionized the calendar
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-triangle"></i> The facade with its complex symbolism: 
+                                the triangle of elevation, the square of stability, and the hexagon of man
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-circle"></i> The twelve astronomical points that 
+                                determine the building's proportions
+                            </li>
+                        </ul>
+                        <p class="fst-italic">
+                            "Every stone of the basilica hides a deeper meaning, an encrypted message 
+                            left by medieval Master Masons."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location 2 -->
+            <div class="location-card mb-4">
+                <h3 class="h4 text-primary">2. Neptune's Fountain</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <p>In the heart of Bologna, the mighty Neptune has watched over the city since 1566, 
+                        a silent witness to the struggle between orthodoxy and heresy during the Council of 
+                        Trent. But the most fascinating stories hide in the buildings that surround it:</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-globe"></i> Neptune, the pagan deity whose trident 
+                                symbolically crushes heresy
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-building"></i> The nearby Palazzo Re Enzo, where the 
+                                wizard Michele Scoto held mysterious banquets
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-star"></i> The remains of the ancient Botanical Garden, 
+                                where magical herbs were studied
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location 3 -->
+            <div class="location-card mb-4">
+                <h3 class="h4 text-primary">3. Galvani Square and the Archiginnasio</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <p>In the ancient seat of the world's oldest university, scientific experiments 
+                        merged with alchemical practices, and medicine conversed with astrology. This was 
+                        a place where the pursuit of knowledge transcended the boundaries between science 
+                        and mystery:</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-flask"></i> The statue of Luigi Galvani, whose 
+                                experiments inspired "Frankenstein"
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-stars"></i> The Anatomical Theater with its mysterious 
+                                astrological cycle
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-gem"></i> The place where "theriac" was produced, 
+                                the ancient universal panacea
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location 4 -->
+            <div class="location-card mb-4">
+                <h3 class="h4 text-primary">4. Via D'Azeglio</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <p>The stones of this ancient street tell tales of medieval masonry and mysterious 
+                        female figures. Here, beneath centuries-old porticoes, the stories of Bologna's 
+                        first masonry and one of the city's most famous witches intertwine:</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-building"></i> The Church of San Procolo, seat of 
+                                the first Masonry
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-star"></i> The Bastardini portico with its enigmatic 
+                                symbol of the She-Devil
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-moon-stars"></i> The place where the witch Caterina 
+                                lived in the 15th century
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location 5 -->
+            <div class="location-card mb-4">
+                <h3 class="h4 text-primary">5. Basilica of San Domenico</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <p>The austere walls of this basilica have guarded the secrets of the Inquisition 
+                        for centuries, but also much older mysteries. In this sacred place, the stories of 
+                        the Templars intertwine with still unsolved enigmas:</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-book"></i> Historic seat of the Inquisition Tribunal
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-shield"></i> Connections with the Templar Order and 
+                                other medieval esoteric movements
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-star"></i> Nearby, the enigma of Aelia Lelia Crispis, 
+                                the mysterious stone that has puzzled scholars for centuries
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location 6 -->
+            <div class="location-card mb-4">
+                <h3 class="h4 text-primary">6. The Santo Stefano Complex</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <p>From ancient pagan roots to Christian mysticism, the Seven Churches preserve 
+                        two thousand years of esoteric history. A true sacred microcosm that reproduces 
+                        the celestial Jerusalem in the heart of Bologna:</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-moon-stars"></i> Ancient origins linked to the cult 
+                                of Isis
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-building"></i> The exact reproduction of Jerusalem's 
+                                Holy Sepulchre
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-star"></i> The mysterious Basin in Pilate's courtyard, 
+                                connected to the Holy Grail legend
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-grid"></i> Capitals decorated with hermetic and 
+                                alchemical symbols
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location 7 -->
+            <div class="location-card mb-4">
+                <h3 class="h4 text-primary">7. The Two Towers</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <p>Bologna's stone sentinels are not merely civic symbols, but the center of an 
+                        elaborate astrological system embracing the entire city. According to 17th-century 
+                        texts, the towers served as the pivot of a true celestial map:</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-moon-stars"></i> The legendary construction of the 
+                                Asinelli Tower in a single night
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-compass"></i> The towers as the center of an urban 
+                                zodiacal system
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-diagram-3"></i> The twelve city gates representing 
+                                the zodiacal signs
+                            </li>
+                        </ul>
+                        <p class="fst-italic">
+                            "The Two Towers are not just Bologna's symbol, but the center of a complex 
+                            sacred geography embracing the entire city."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location 8 -->
+            <div class="location-card mb-4">
+                <h3 class="h4 text-primary">8. The Former Jewish Ghetto</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <p>In the narrow alleys of the ancient ghetto, Kabbalistic wisdom merged with 
+                        alchemical research. Here, among tower houses and hidden synagogues, scholars 
+                        sought to unveil the secrets of matter and spirit:</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-stars"></i> Center of the city's Kabbalistic and 
+                                alchemical studies
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-brightness-high"></i> Site of the discovery of 
+                                Casciarolo's "Luciferin Stone"
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-building"></i> Palazzo Bocchi and the Hermatena 
+                                academy, meeting point of scholars and esotericists
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location 9 -->
+            <div class="location-card mb-4">
+                <h3 class="h4 text-primary">9. Via Galliera</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <p>This elegant street conceals the cradle of Bolognese tarot. Among its noble 
+                        palaces, stories of divinatory arts and persecutions intertwine with those of 
+                        powerful families and ancient traditions:</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-house"></i> Palazzo Felicini and the Fibbia 
+                                Castracani family, linked to the birth of tarot
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-fire"></i> The memory of the "Devil's Bonfire" of 
+                                1423 in Piazza Maggiore
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-star"></i> The first representation of the Hanged 
+                                Man in the Bolognini Chapel
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location 10 -->
+            <div class="location-card mb-4">
+                <h3 class="h4 text-primary">10. Via IV Novembre</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <p>An apparently ordinary street that conceals extraordinary connections to the 
+                        occult world. From the birthplace of one of the greatest inventors to the 
+                        dwellings of witches and astrologers, every stone tells a story of magic and 
+                        science:</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-star"></i> The birthplace of Guglielmo Marconi and 
+                                his interest in spiritualism
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-book"></i> The first Chair of Astrology in the 
+                                Faculty of Medicine
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-moon-stars"></i> The Torresotto Portanova, home of 
+                                the legendary "enormous witch" Gentile Cimieri
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location 11 -->
+            <div class="location-card mb-4">
+                <h3 class="h4 text-primary">11. Piazza San Francesco</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <p>The journey concludes in a place where art, music, and alchemy blend in 
+                        perfect harmony. The ancient tombs of the Glossators, guardians of forgotten 
+                        knowledge, watch over the square where even the young Mozart left his 
+                        mysterious mark:</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-book"></i> The Glossators' tombs with their 
+                                hermetic symbols
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-star"></i> The memory of Mozart's examination at 
+                                the Philharmonic Academy
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-building"></i> The Gothic basilica and its tales 
+                                of conventual alchemy
+                            </li>
+                        </ul>
+                        <p class="fst-italic">
+                            "A place where music, alchemy, and knowledge intertwine, concluding the 
+                            journey through Bologna's mysteries."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Historical Context -->
+        <section class="bg-light p-4 rounded mb-5">
+            <h3 class="h4 mb-3">History of the Tour</h3>
+            <p>The "Bologna Magica Tour" was born in 1992 from a love for a city that has always 
+            evoked mystery and enchantment. For almost three decades, it guided curious visitors 
+            and enthusiasts through the streets of Bologna, revealing secrets hidden among its 
+            medieval porticoes and towers.</p>
+            <p class="mb-0">Each stop on the route was carefully selected to reveal a different 
+            aspect of esoteric Bologna: from alchemy to witchcraft, from astrology to tarot, 
+            creating a fascinating mosaic of history and mystery.</p>
+        </section>
+
+        <!-- Personal Note -->
+        <div class="card border-primary mb-5">
+            <div class="card-body">
+                <h3 class="h5 card-title">A Heritage to Preserve</h3>
+                <p class="card-text">
+                    "Rediscovering this historic tour has been an incredible emotion. Preserving 
+                    the memory of these routes means keeping alive a fundamental part of Bologna's 
+                    identity, its most mysterious and fascinating side. Through this website, we 
+                    want to allow everyone to explore these places full of history and mystery."
+                </p>
+                <footer class="blockquote-footer mt-2">Max</footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-lg-4">
+        <!-- Tour Info Box -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="h5 mb-0">Tour Information</h3>
+            </div>
+            <div class="card-body">
+                <p>The original route included 11 stops in Bologna's historic center. Each stop 
+                reveals a different aspect of the esoteric city, creating a unique journey through 
+                centuries of history and mystery.</p>
+                <p class="small text-muted mb-0">
+                    Estimated walking time: 2-3 hours
+                </p>
+            </div>
+        </div>
+
+        <!-- Did You Know Box -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 class="h5 mb-0">Did You Know?</h3>
+            </div>
+            <div class="card-body">
+                <p>The "Bologna Magica Tour" was active from 1992 to 2020, guiding thousands of 
+                visitors to discover the city's mysteries. It was created by passionate local 
+                researchers who dedicated years to studying Bologna's esoteric side.</p>
+            </div>
+        </div>
+
+        <!-- Related Paths -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="h5 mb-0">Related Paths</h3>
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="/bologna-magica/percorsi/tarocchi" class="list-group-item list-group-item-action">
+                    Tarot Path
+                </a>
+                <a href="/bologna-magica/percorsi/esoterico" class="list-group-item list-group-item-action">
+                    Esoteric Path
+                </a>
+                <a href="/bologna-magica/percorsi/alchemico" class="list-group-item list-group-item-action">
+                    Alchemy Path
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

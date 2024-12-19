@@ -12,7 +12,7 @@ DOMAIN = "https://bolognamagica.com"
 
 # Constants for Bologna Magica paths
 BOLOGNA_PERCORSI = ['tarocchi', 'esoterico', 'alchemico']
-BOLOGNA_PAGES = ['bologna-tarocchi', 'storia-misteri']
+BOLOGNA_PAGES = ['bologna-tarocchi', 'storia-misteri', 'bologna-magica-tour']
 
 # Home Page
 @sitemapper.include(changefreq="weekly", priority=1.0)
@@ -27,7 +27,7 @@ def index():
 def bologna_magica():
     return render_template('bologna-magica/index.html')
 
-# Bologna e i Tarocchi + Storia & Misteri (2 paths)
+# Bologna e i Tarocchi + Storia & Misteri + Bologna Magica Tour (3 paths)
 @app.route('/bologna-magica/<path>')
 def bologna_page(path):
     return render_template(f'bologna-magica/{path}.html')

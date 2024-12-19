@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it" dir="ltr" class="h-100">
+<html lang="{% block html_lang %}it{% endblock %}" dir="ltr" class="h-100">
   <head>    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,6 +54,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/static/images/favicon.png">
     
+    <!-- Language alternates -->
+    {% block language_alternates %}{% endblock %}    
 </head>
 
   <body class="d-flex flex-column h-100">
@@ -86,6 +88,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/bologna-magica">Scopri la Città Magica</a></li>
+                <li><a class="dropdown-item" href="/bologna-magica/bologna-magica-tour">Bologna Magica Tour</a></li>
                 <li><a class="dropdown-item" href="/bologna-magica/bologna-tarocchi">Bologna e i Tarocchi</a></li>
                 <li><a class="dropdown-item" href="/bologna-magica/storia-misteri">Storia & Misteri</a></li>
                 <li><hr class="dropdown-divider"></li>
